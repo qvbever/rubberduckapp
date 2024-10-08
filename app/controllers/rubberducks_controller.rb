@@ -1,0 +1,2 @@
+class RubberducksController < ApplicationController
+end
