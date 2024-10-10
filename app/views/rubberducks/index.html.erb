@@ -1,0 +1,9 @@
+<h1>Rubberducks</h1>
+
+<ul>
+<% @rubberducks.each do |rubberduck| %>
+<li><%= rubberduck.name %></li>
+<% end %>
+</ul>
+
+<%= link_to "Add a rubberduck", new_rubberduck_path, class: "btn btn-primary" %>
