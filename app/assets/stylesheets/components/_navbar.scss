@@ -1,6 +1,9 @@
-.navbar-lewagon {
+@import "../config/colors";
+
+.costum-navbar {
   justify-content: space-between;
-  background: white;
+  background: $light-orange;
+  z-index: 10;
 }
 
 .navbar-lewagon .navbar-collapse {
