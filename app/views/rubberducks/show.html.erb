@@ -1,0 +1,8 @@
+<h1><%= @rubberduck.name %></h1>
+
+
+<% if params[:user_id] %>
+ <%= link_to "Go back to see your rubberducks", user_rubberducks_path, class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to "Go back to see all rubberducks", rubberducks_path, class: "btn btn-primary" %>
