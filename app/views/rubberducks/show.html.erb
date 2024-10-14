@@ -1,8 +1,12 @@
-<h1><%= @rubberduck.name %></h1>
+<h1><%= @rubberduck.name %> Details</h1>
 
+<div class="rubber-duck-details">
+  <img src="#" alt="<%= @rubberduck.name %> Image" class="duck-image">
 
-<% if params[:user_id] %>
- <%= link_to "Go back to see your rubberducks", user_rubberducks_path, class: "btn btn-primary" %>
-<% end %>
+  <h2>Outfit: <%= @rubberduck.outfit %></h2>
+  <p>City: <%= @rubberduck.city %></p>
+  <p>Price: $<%= @rubberduck.price %></p>
+  <p>Rating: *****</p>
+</div>
 
-<%= link_to "Go back to see all rubberducks", rubberducks_path, class: "btn btn-primary" %>
+<%= link_to "Back to All Rubberducks", rubberducks_path, class: "btn btn-secondary" %>
