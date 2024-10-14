@@ -1,0 +1,26 @@
+<% if params[:user_id] %>
+  <h1>Your Rubberducks</h1>
+<% else %>
+  <h1>Rubberducks</h1>
+<% end %>
+
+<% if @rubberducks.any? %>
+  <ul>
+    <% @rubberducks.each do |rubberduck| %>
+      <li>
+        <% if params[:user_id] %>
+          <%= link_to rubberduck.name, user_rubberduck_path(params[:user_id], rubberduck) %>
+        <% else %>
+          <%= link_to rubberduck.name, rubberduck_path(rubberduck) %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No rubberducks available.</p>
+<% end %>
+
+<% if params[:user_id] %>
+  <%= link_to "Add a rubber duck", new_user_rubberduck_path, class: "btn btn-primary" %>
+  <%= link_to "Go back to see all rubberducks", rubberducks_path, class: "btn btn-primary" %>
+<% end %>
