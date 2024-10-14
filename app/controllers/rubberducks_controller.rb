@@ -1,2 +1,0 @@
-class RubberducksController < ApplicationController
-end

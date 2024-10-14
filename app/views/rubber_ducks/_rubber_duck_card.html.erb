@@ -1,0 +1,14 @@
+<a href="<%= duck_path(duck) %>" class="rubber-duck-card">
+    <img src="<%= duck.image_url %>" alt="Rubber Duck" class="duck-image">
+    <div class="card-info">
+        <div class="duck-header">
+            <h3 class="duck-name"><%= "#{duck.name}, #{duck.outfit}" %></h3>
+            <div class="duck-rating">
+                <i class="fas fa-star"></i>
+                <span class="rating-number"><%= duck.rating %></span>
+            </div>
+        </div>
+        <p class="duck-city">City: <%= duck.city %></p>
+        <p class="duck-price">Price: $<%= duck.price %></p>
+    </div>
+</a>
