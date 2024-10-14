@@ -1,6 +1,15 @@
-.navbar-lewagon {
+@import "../config/colors";
+
+.costum-navbar {
   justify-content: space-between;
-  background: white;
+  background: $light-orange;
+  z-index: 10;
+
+  .container{
+    display: flex;
+    align-items: center;
+  }
+
 }
 
 .navbar-lewagon .navbar-collapse {
