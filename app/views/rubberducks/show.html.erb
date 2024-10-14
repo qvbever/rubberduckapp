@@ -1,8 +1,7 @@
 <h1><%= @rubberduck.name %> Details</h1>
 
 <div class="rubber-duck-details">
-  <img src="#" alt="<%= @rubberduck.name %> Image" class="duck-image">
-
+  <%= image_tag "rubber_index.webp", class: "duck-image" %>
   <h2>Outfit: <%= @rubberduck.outfit %></h2>
   <p>City: <%= @rubberduck.city %></p>
   <p>Price: $<%= @rubberduck.price %></p>
@@ -10,3 +9,4 @@
 </div>
 
 <%= link_to "Back to All Rubberducks", rubberducks_path, class: "btn btn-secondary" %>
+#testing
