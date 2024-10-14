@@ -5,13 +5,14 @@
 <% end %>
 
 <% if @rubberducks.any? %>
-  <ul>
+  <ul style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;">
     <% @rubberducks.each do |rubberduck| %>
       <li>
         <% if params[:user_id] %>
+          <%= render "shared/rubber_duck_card", rubberduck: rubberduck %>
           <%= link_to rubberduck.name, user_rubberduck_path(params[:user_id], rubberduck) %>
         <% else %>
-          <%= link_to rubberduck.name, rubberduck_path(rubberduck) %>
+          <%= render "shared/rubber_duck_card", rubberduck: rubberduck %>
         <% end %>
       </li>
     <% end %>

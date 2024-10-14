@@ -1,0 +1,14 @@
+<a href="<%= rubberduck_path(rubberduck) %>" class="rubber-duck-card">
+    <img src="#" alt="Rubber Duck" class="duck-image">
+    <div class="card-info">
+        <div class="duck-header">
+            <h3 class="duck-name"><%= "#{rubberduck.name}, #{rubberduck.outfit}" %></h3>
+            <div class="duck-rating">
+                <i class="fas fa-star"></i>
+                <span class="rating-number"><%= "*****" %></span>
+            </div>
+        </div>
+        <p class="duck-city">City: <%= rubberduck.city %></p>
+        <p class="duck-price">Price: $<%= rubberduck.price %></p>
+    </div>
+</a>
