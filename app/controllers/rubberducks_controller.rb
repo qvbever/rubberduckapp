@@ -22,6 +22,9 @@ class RubberducksController < ApplicationController
   end
 
   def show
+    @rubberduck = Rubberduck.find(params[:id])
+    # @rubberduck = @user.rubberducks.find(params[:id])
+    @booking = Booking.new
     if params[:user_id].present?
       @user = User.find(params[:user_id])
       @rubberduck = @user.rubberducks.find(params[:id])

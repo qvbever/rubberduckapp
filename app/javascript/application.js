@@ -3,4 +3,12 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "@popperjs/core"
 import "bootstrap"
-import "@fortawesome/fontawesome-free/css/all";
+import flatpickr from "flatpickr";
+
+document.addEventListener('turbo:load', function() {
+  flatpickr('.datepicker', {
+    enableTime: false,       // Disable time picker
+    dateFormat: 'Y/m/d',     // Format: Day/Month/Year
+    minDate: 'today',        // Disable past dates
+  });
+});
