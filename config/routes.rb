@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { sessions: 'users/sessions' }
   root to: "rubberducks#index"
   resources :rubber_ducks
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :users do
-    resources :rubberducks, only: [:index, :new, :create, :show]
+    resources :rubberducks
   end
 
   resources :rubberducks, only: [:index, :show]
