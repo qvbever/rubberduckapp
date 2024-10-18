@@ -1,11 +1,11 @@
-<a href="<%= rubberduck_path(rubberduck) %>" class="rubber-duck-card">
-    <%= image_tag "rubber_index.webp", class: "duck-image" %>
+<a href="<%= rubberduck_path(rubberduck) %>" class="rubberduck-card">
+    <%= image_tag "rubberducks/#{rubberduck.image_url}", class: "duck-image" %>
     <div class="card-info">
         <div class="duck-header">
             <h3 class="duck-name"><%= "#{rubberduck.name}, #{rubberduck.outfit}" %></h3>
             <div class="duck-rating">
                 <i class="fas fa-star"></i>
-                <span class="rating-number"><%= "*****" %></span>
+                <span class="rating-number"><%= "*" * rubberduck.rating %></span>
             </div>
         </div>
         <p class="duck-city">City: <%= rubberduck.city %></p>
