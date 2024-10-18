@@ -9,10 +9,11 @@ class BookingsController < ApplicationController
     @booking = @rubberduck.bookings.build(booking_params)
     @booking.user = current_user
 
+    puts params.inspect  # Add this line to inspect the incoming parameters
+
     if @booking.save
       redirect_to @rubberduck, notice: "Booking successful!"
     else
-      # Render the rubberduck's show page if validation fails
       render "rubberducks/show"
     end
   end
