@@ -14,5 +14,7 @@ Rails.application.routes.draw do
     resources :rubberducks, only: [:index, :new, :create, :show]
   end
 
-  resources :rubberducks, only: [:index, :show]
+  resources :rubberducks, only: [:index, :show] do
+    resources :bookings, only: [:new, :create, :index]
+  end
 end

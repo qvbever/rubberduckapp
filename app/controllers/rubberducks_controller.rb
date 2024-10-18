@@ -32,6 +32,7 @@ class RubberducksController < ApplicationController
   def show
     @rubberduck = Rubberduck.find(params[:id])
     # @rubberduck = @user.rubberducks.find(params[:id])
+    @booking = Booking.new
   end
 
   private

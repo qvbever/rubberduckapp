@@ -137,8 +137,6 @@ GEM
     ffi (1.17.0-x86_64-darwin)
     ffi (1.17.0-x86_64-linux)
     ffi (1.17.0-x86_64-linux-musl)
-    font-awesome-sass (6.5.2)
-      sassc (~> 2.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.6)
@@ -321,7 +319,6 @@ DEPENDENCIES
   devise
   dotenv-rails
   error_highlight (>= 0.4.0)
-  font-awesome-sass (~> 6.1)
   importmap-rails
   jbuilder
   pg (~> 1.1)
