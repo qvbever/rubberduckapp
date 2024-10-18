@@ -1,0 +1,18 @@
+<% full_stars = rating.floor %>  <!-- Number of full stars -->
+<% half_star = (rating % 1) >= 0.5 ? 1 : 0 %>  <!-- Check if there's a half star -->
+<% empty_stars = 5 - full_stars - half_star %>  <!-- Remaining empty stars to fill up to 5 -->
+
+<!-- Render full stars -->
+<% full_stars.times do %>
+  <i class="fas fa-star"></i>
+<% end %>
+
+<!-- Render half star if applicable -->
+<% if half_star == 1 %>
+  <i class="fas fa-star-half-alt"></i>
+<% end %>
+
+<!-- Render empty stars -->
+<% empty_stars.times do %>
+  <i class="far fa-star"></i>
+<% end %>
