@@ -1,27 +1,19 @@
-<% if params[:user_id] %>
-  <h1>Your Rubberducks</h1>
-<% else %>
-  <h1>Rubberducks</h1>
-<% end %>
+<h1>Rubberducks</h1>
 
 <% if @rubberducks.any? %>
-  <ul style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;">
-    <% @rubberducks.each do |rubberduck| %>
-      <li>
-        <% if params[:user_id] %>
-          <%= render "shared/rubber_duck_card", rubberduck: rubberduck %>
-          <%= link_to rubberduck.name, user_rubberduck_path(params[:user_id], rubberduck) %>
-        <% else %>
-          <%= render "shared/rubber_duck_card", rubberduck: rubberduck %>
-        <% end %>
-      </li>
-    <% end %>
-  </ul>
+  <div class="duck-container">
+    <ul class="duck-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px;">
+      <% @rubberducks.each do |rubberduck| %>
+        <li>
+          <% if params[:user_id] %>
+            <%= render "shared/rubber_duck_card", rubberduck: rubberduck %>
+          <% else %>
+            <%= render "shared/rubber_duck_card", rubberduck: rubberduck %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 <% else %>
   <p>No rubberducks available.</p>
-<% end %>
-
-<% if params[:user_id] %>
-  <%= link_to "Add a rubber duck", new_user_rubberduck_path, class: "btn btn-primary" %>
-  <%= link_to "Go back to see all rubberducks", rubberducks_path, class: "btn btn-primary" %>
 <% end %>

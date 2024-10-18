@@ -1,84 +1,60 @@
-body {
-  font-family: 'Poppins', sans-serif;
+.rubberduck-card {
+  display: block;
   background-color: #FEFFD2;
-  margin: 0;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.card-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-  margin: 20px;
-}
-
-.rubber-duck-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-  width: 300px; /* Fixed width for the card */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-decoration: none;
   color: inherit;
-  background-color: white;
-}
-
-.rubber-duck-card:hover {
-  transform: scale(1.05);
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .duck-image {
   width: 100%;
-  height: auto;
-  border-radius: 10px;
-  max-width: 250px;
+  height: 200px;
+  object-fit: cover;
 }
 
 .card-info {
-  padding: 15px 15px 5px; /* Adjusted padding for bottom */
-  width: 90%; /* Reduce width to 90% to leave space on the sides */
-  text-align: left; /* Keep the text aligned to the left */
-  margin: 0 auto; /* Center the .card-info inside the .rubber-duck-card */
-}
+  padding: 15px;
 
-.duck-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  .duck-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
 
-.duck-name,
-.rating-number {
-  font-size: 16px;
-  color: #FF7D29;
-  font-weight: bold;
-  margin: 0;
-}
+    .duck-name {
+      font-size: 1.2em;
+      color: #FF7D29;
+    }
 
-.fas.fa-star {
-  color: #FF7D29;
-  font-size: 14px;
-  margin-right: 5px;
-}
+    .duck-rating {
+      display: flex;
+      align-items: center;
 
-.duck-city {
-  margin: 5px 0;
-  font-size: 13px;
-  color: #888888;
-}
+      i {
+        color: #FFBF78;
+      }
 
-.duck-price {
-  margin: 10px 0; /* Increased margin for more space */
-  font-size: 13px;
-  color: #FF7D29;
-  font-weight: bold;
+      .rating-number {
+        margin-left: 5px;
+        color: #FFBF78;
+      }
+    }
+  }
+
+  .duck-city,
+  .duck-price {
+    font-size: 1em;
+    color: #FF7D29;
+  }
+
+  .duck-city {
+    margin-bottom: 5px;
+  }
 }
