@@ -5,7 +5,8 @@
 <% end %>
 
 <% if @rubberducks.any? %>
-  <ul style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;">
+ <div class="duck-container">
+  <ul class="duck-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px;">
     <% @rubberducks.each do |rubberduck| %>
       <li>
         <% if params[:user_id] %>
@@ -17,6 +18,7 @@
       </li>
     <% end %>
   </ul>
+   </div>
 <% else %>
   <p>No rubberducks available.</p>
 <% end %>
