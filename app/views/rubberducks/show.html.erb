@@ -6,7 +6,18 @@
   <p>City: <%= @rubberduck.city %></p>
   <p>Price: $<%= @rubberduck.price %></p>
   <p>Rating: *****</p>
+  <p>Owner: <%= link_to "#{@user.name}", user_path(@user) %> </p>
+  <% if current_user == @user %>
+    <%= link_to "Edit this rubberduck", edit_user_rubberduck_path(@user) %>
+    <%= button_to 'Delete this rubberduck', user_rubberduck_path(@user), method: :delete, data: {turbo_confirm: 'Are you sure?'}, class: "btn btn-danger" %>
+  <% end %>
 </div>
 
-<%= link_to "Back to All Rubberducks", rubberducks_path, class: "btn btn-secondary" %>
-#testing
+<% if !user_signed_in? %>
+  <%= link_to 'Book this rubberduck now', new_user_session_path %>
+<% end %>
+
+<% if user_signed_in? %>
+  <%= link_to "Go to your profile", user_path(current_user) %>
+<% end %>
+<%= link_to "Back to the Home Page", rubberducks_path, class: "btn btn-secondary" %>
