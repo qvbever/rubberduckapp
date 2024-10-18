@@ -14,6 +14,17 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_18_111309) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "bookings", force: :cascade do |t|
+    t.date "start_date"
+    t.date "end_date"
+    t.bigint "rubberduck_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["rubberduck_id"], name: "index_bookings_on_rubberduck_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
   create_table "rubberducks", force: :cascade do |t|
     t.string "name"
     t.string "city"
@@ -24,6 +35,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_18_111309) do
     t.datetime "updated_at", null: false
     t.string "image_url"
     t.decimal "rating"
+    t.string "description"
     t.index ["user_id"], name: "index_rubberducks_on_user_id"
   end
 
@@ -35,9 +47,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_18_111309) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "rubberducks"
+  add_foreign_key "bookings", "users"
   add_foreign_key "rubberducks", "users"
 end

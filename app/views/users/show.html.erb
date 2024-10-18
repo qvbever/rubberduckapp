@@ -1,0 +1,41 @@
+<% if user_signed_in? %>
+  <% if current_user == @user %>
+    <h1>Your Profile</h1>
+  <% else %>
+    <h1><%= @user.name %>'s Profile</p>
+  <% end %>
+
+  <% if @user.rubberducks.any? %>
+    <% if current_user == @user %>
+      <h2>Your rubberducks</h2>
+    <% else %>
+      <h2>Here are <%= @user.name %>'s current rubberducks</h2>
+    <% end %>
+  <% end %>
+<% else %>
+  <h1>Welcome to <%= @user.name %>'s Profile</h1>
+  <% if @user.rubberducks.any? %>
+    <h2>Here are <%= @user.name %>'s current rubberducks</h2>
+  <% end %>
+<% end %>
+
+<% if @user.rubberducks.any? %>
+  <ul style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;">
+    <% @user.rubberducks.each do |rubberduck| %>
+      <li>
+        <% if user_signed_in? %>
+          <%= render "shared/rubber_duck_card", rubberduck: rubberduck %>
+        <% else %>
+          <%= render "shared/rubber_duck_card", rubberduck: rubberduck %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No rubberducks available.</p>
+<% end %>
+
+<% if current_user == @user %>
+  <%= link_to "Add a rubberduck", new_user_rubberduck_path(@user)  %>
+<% end %>
+<%= link_to "Back to Home Page", rubberducks_path, class: "btn btn-secondary" %>

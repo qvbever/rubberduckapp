@@ -1,29 +1,21 @@
 class RubberducksController < ApplicationController
   # skip_before_action :authenticate_user!, only: :index
-  before_action :set_user, only: [:new, :create]
+  before_action :set_user
+  before_action :set_rubberduck, only: [:edit, :update, :destroy]
 
   def index
     @rubberducks = Rubberduck.all
-    # @rubberducks = @user.rubberducks
-    if params[:user_id]
-      @user = User.find(params[:user_id])
-      @rubberducks = @user.rubberducks
-    else
-      @rubberducks = Rubberduck.all
-    end
   end
 
   def new
-    # @rubberduck = Rubberduck.new
+    @user = User.find(params[:user_id])
     @rubberduck = @user.rubberducks.build
   end
 
   def create
     @rubberduck = @user.rubberducks.build(rubberduck_params)
-    # @rubberduck = Rubberduck.new(rubberduck_params)
-    # @rubberduck.user = @user
     if @rubberduck.save
-      redirect_to user_rubberduck_path(@user, @rubberduck)
+      redirect_to user_path(@user), notice: 'Rubberduck was successfully created.'
     else
       render "new", status: :unprocessable_entity
     end
@@ -32,15 +24,41 @@ class RubberducksController < ApplicationController
   def show
     @rubberduck = Rubberduck.find(params[:id])
     # @rubberduck = @user.rubberducks.find(params[:id])
+    @booking = Booking.new
+    if params[:user_id].present?
+      @user = User.find(params[:user_id])
+      @rubberduck = @user.rubberducks.find(params[:id])
+    else
+      @rubberduck = Rubberduck.find(params[:id])
+      @user = @rubberduck.user
+    end
+  end
+
+  def edit
+    @user = @rubberduck.user
+  end
+
+  def update
+    @rubberduck.update(rubberduck_params)
+    redirect_to rubberduck_path(@rubberduck)
+  end
+
+  def destroy
+    @rubberduck.destroy
+    redirect_to user_path(@user), status: :see_other
   end
 
   private
 
   def set_user
-    @user = User.find(params[:user_id])
+    @user = current_user
+  end
+
+  def set_rubberduck
+    @rubberduck = Rubberduck.find(params[:id])
   end
 
   def rubberduck_params
-    params.require(:rubberduck).permit(:name, :city, :outfit, :price)
+    params.require(:rubberduck).permit(:name, :city, :outfit, :price, :description)
   end
 end

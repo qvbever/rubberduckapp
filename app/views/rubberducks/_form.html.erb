@@ -3,5 +3,7 @@
 <%= f.input :city %>
 <%= f.input :outfit %>
 <%= f.input :price %>
-<%= f.submit %>
+<%= f.input :description %>
+<%= f.submit @rubberduck.persisted? ? 'Update Rubberduck' : 'Add Rubberduck',
+  data: { confirm: @rubberduck.persisted? ? "Are you sure you want to update this Rubberduck?" : "Are you sure you want to add this Rubberduck?" } %>
 <% end %>
