@@ -3,11 +3,12 @@
     <a class="navbar-brand" href="<%= rubberducks_path %>">
       <%= image_tag "logo-duck.jpg", alt: "Logo - Duck with sunglasses", width: 75, height: 75, class: "rounded-circle navbar-logo" %>
     </a>
+
     <!-- Search Form -->
-    <div class="d-flex justify-content-center align-items-center mx-auto">
+    <div class="search-container mx-auto">
       <%= form_with url: root_path, method: :get, local: true, class: "form-inline d-flex justify-content-center align-items-center" do |form| %>
-        <%= form.text_field :query, placeholder: "Find your Rubberduck...", class: "form-control mr-sm-2 rounded-pill", size: 30 %>
-        <%= form.submit "Search", class: "btn btn-outline-primary my-2 my-sm-0 rounded-pill" %>
+        <%= form.text_field :query, placeholder: "Find your Rubberduck...", class: "form-control search-input mr-2 rounded-pill", size: 30 %>
+        <%= form.submit "Search", class: "btn btn-outline-primary rounded-pill search-button" %>
       <% end %>
     </div>
     <!-- Right-side buttons: Sign Up and User Profile -->

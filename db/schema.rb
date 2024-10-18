@@ -34,8 +34,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_10_18_111309) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image_url"
-    t.string "description"
     t.decimal "rating"
+    t.string "description"
     t.index ["user_id"], name: "index_rubberducks_on_user_id"
   end
 

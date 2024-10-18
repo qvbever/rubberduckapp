@@ -1,60 +1,164 @@
-.rubberduck-card {
-  display: block;
-  background-color: #FEFFD2;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-decoration: none;
-  color: inherit;
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+/* Set the background of the entire page to light yellow */
+body {
+  background-color: #FEFFD2; /* Light yellow from your color scheme */
+  font-family: 'Poppins', Arial, sans-serif; /* Set the global font to Poppins */
+}
+
+/* Container for the grid of rubberduck cards */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h1 {
+    text-align: center;
+    color: #FF7D29;
+    margin-bottom: 40px;
+    font-size: 2rem; /* Larger and modern heading */
   }
 }
 
-.duck-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+/* Remove default list styles for grid */
+.duck-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Add space between grid items */
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
 }
 
+/* Rubberduck card styling */
+.rubberduck-card {
+  display: block;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  padding: 0; /* Remove extra padding around the card */
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Duck image styling */
+.duck-image {
+  width: calc(100% - 20px);
+  height: auto; /* Dynamically adjust height based on the image's aspect ratio */
+  object-fit: contain; /* Ensures the whole image is visible without cropping */
+  background-color: #f0f0f0; /* Background color in case of aspect ratio differences */
+  border-radius: 15px 15px 0 0; /* Rounded top corners only */
+  display: block; /* Ensures the image takes full width */
+  transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+  margin: 10px 10px 0 10px;
+}
+
+.rubberduck-card:hover .duck-image {
+  transform: scale(1.02); /* Slight zoom on hover */
+}
+
+/* Card info styling */
 .card-info {
-  padding: 15px;
+  padding: 12px;
 
   .duck-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 10px;
 
     .duck-name {
-      font-size: 1.2em;
+      display: flex;
+      flex-direction: column;
+      font-size: 1.25rem;
       color: #FF7D29;
+      font-weight: 600;
+      margin-left: 5px;
     }
 
-    .duck-rating {
-      display: flex;
+    .duck-name-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; /* If name is too long, it will truncate with ellipsis */
+      max-width: 100%;
+    }
+  }
+    .duck-outfit-text {
+      font-size: 1rem;
+      color: #777777; /* Lighter color for outfit */
+      margin-top: 10px; /* Moves the outfit value down from the name */
+      display: inline-flex;
       align-items: center;
 
       i {
-        color: #FFBF78;
+        color: #FFBF78; /* Color for the outfit icon */
+        margin-right: 8px; /* Space between the icon and outfit text */
       }
+    }
 
-      .rating-number {
-        margin-left: 5px;
-        color: #FFBF78;
-      }
+    /* Styling for the city element */
+    .duck-city {
+      font-size: 1rem;
+      color: #666666 !important; /* Make sure the color is applied */
+      margin: 0 !important; /* Remove margin */
+      padding: 0 !important; /* Remove padding */
+      margin-bottom: 0;
+
+    i {
+      color: #FFBF78 !important; /* Make sure icon color is applied */
+      margin-right: 8px;
+      margin-left: 8px;
     }
   }
 
-  .duck-city,
+  /* Styling for the price element */
   .duck-price {
-    font-size: 1em;
-    color: #FF7D29;
+    font-size: 1rem;
+    color: #FF7D29 !important; /* Euro price color */
+    font-weight: 550; /* Bold font for emphasis */
+    margin-bottom: 0;
+    padding-top: 10px;
+
+    i {
+    color: #FFBF78; /* Bathtub icon color matching the filled stars */
+    margin-right: 8px; /* Space between the icon and the price */
+    margin-left: 8px;
+    }
+  }
+}
+
+
+/* Rating Star Styling */
+.duck-rating {
+  display: inline-flex; /* to ensure stars are inline */
+  align-items: center;
+
+  i {
+    color: #FFBF78; /* Color for filled and half stars */
+    font-size: 0.9rem; /* Smaller star size */
+    margin-right: 0; /* Remove space between stars */
+    padding: 0; /* no padding is applied */
   }
 
-  .duck-city {
-    margin-bottom: 5px;
+ /* Empty stars */
+ .far {
+  color: #e0e0e0; /* Lighter color for empty stars */
+}
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .rubberduck-card {
+    margin: 10px;
+  }
+
+  .duck-list {
+    grid-template-columns: 1fr; /* Single column on small screens */
   }
 }

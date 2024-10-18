@@ -1,14 +1,29 @@
 <a href="<%= rubberduck_path(rubberduck) %>" class="rubberduck-card">
-    <%= image_tag "rubberducks/#{rubberduck.image_url}", class: "duck-image" %>
-    <div class="card-info">
-        <div class="duck-header">
-            <h3 class="duck-name"><%= "#{rubberduck.name}, #{rubberduck.outfit}" %></h3>
-            <div class="duck-rating">
-                <i class="fas fa-star"></i>
-                <span class="rating-number"><%= "*" * rubberduck.rating %></span>
-            </div>
-        </div>
-        <p class="duck-city">City: <%= rubberduck.city %></p>
-        <p class="duck-price">Price: $<%= rubberduck.price %></p>
+  <%= image_tag "rubberducks/#{rubberduck.image_url}", class: "duck-image" %>
+
+  <div class="card-info">
+    <div class="duck-header">
+      <h3 class="duck-name">
+        <span class="duck-name-text"><%= rubberduck.name %></span>
+        <span class="duck-outfit-text">
+          <i class="fas fa-tshirt"></i> <!-- Outfit icon -->
+          <%= rubberduck.outfit %>
+        </span>
+      </h3>
+
+      <div class="duck-rating">
+        <%= render partial: "shared/rating_stars", locals: { rating: rubberduck.rating } %>
+      </div>
     </div>
+
+    <p class="duck-city">
+      <i class="fas fa-map-marker-alt"></i> <!-- Location icon -->
+      <%= rubberduck.city %>
+    </p>
+
+    <p class="duck-price">
+      <i class="fas fa-bath"></i> <!-- Bathtub icon -->
+      €<%= rubberduck.price %> per Bath
+    </p>
+  </div>
 </a>
