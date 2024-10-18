@@ -1,12 +1,42 @@
-<h1><%= @rubberduck.name %> Details</h1>
+<div class="container show-page">
+  <!-- Image Section -->
+  <div class="main-image">
+   <%= image_tag "rubberducks/#{@rubberduck.image_url}", alt: @rubberduck.name, class: "img-fluid" %>
+  </div>
 
-<div class="rubber-duck-details">
-  <%= image_tag "rubber_index.webp", class: "duck-image" %>
-  <h2>Outfit: <%= @rubberduck.outfit %></h2>
-  <p>City: <%= @rubberduck.city %></p>
-  <p>Price: $<%= @rubberduck.price %></p>
-  <p>Rating: *****</p>
+  <!-- Duck Details Section -->
+  <div class="row details-section mt-4">
+    <div class="col-md-8">
+      <!-- Duck Name and Rating -->
+      <div class="duck-header d-flex justify-content-between align-items-center">
+        <h1 class="duck-name"><%= @rubberduck.name %></h1>
+        <div class="duck-rating">
+          <%= render partial: "shared/rating_stars", locals: { rating: @rubberduck.rating } %>
+        </div>
+      </div>
+
+      <!-- Location -->
+      <p class="duck-location">
+        <i class="fas fa-map-marker-alt"></i> <%= @rubberduck.city %>
+      </p>
+
+      <!-- Description -->
+      <div class="duck-description">
+        <h4>Description</h4>
+        <p>some description</p>
+      </div>
+
+      <!-- Reviews -->
+      <div class="reviews mt-5">
+        <h4>Reviews</h4>
+      </div>
+    </div>
+
+    <!-- Booking Sidebar -->
+    <div class="col-md-4 booking-section sticky-top">
+      <div class="booking-card">
+        <h3>€<%= @rubberduck.price %> per bath</h3>
+      </div>
+    </div>
+  </div>
 </div>
-
-<%= link_to "Back to All Rubberducks", rubberducks_path, class: "btn btn-secondary" %>
-#testing

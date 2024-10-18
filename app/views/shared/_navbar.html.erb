@@ -1,28 +1,33 @@
-<nav class="navbar costum-navbar d-flex" style="width: 100%; position :relative;">
-  <div class="container">
+<nav class="navbar costum-navbar d-flex w-100 position-relative">
+  <div class="container d-flex justify-content-between align-items-center">
+    <!-- Logo -->
     <a class="navbar-brand" href="#">
       <%= image_tag "logo-duck.jpg", alt: "Logo - Duck with sunglasses", width: 75, height: 75, class: "rounded-circle navbar-logo" %>
     </a>
+
     <!-- Search Form -->
-    <div class="d-flex justify-content-center align-items-center mx-auto">
+    <div class="search-container mx-auto">
       <%= form_with url: root_path, method: :get, local: true, class: "form-inline d-flex justify-content-center align-items-center" do |form| %>
-        <%= form.text_field :query, placeholder: "Find your Rubberduck...", class: "form-control mr-sm-2 rounded-pill", size: 30 %>
-        <%= form.submit "Search", class: "btn btn-outline-primary my-2 my-sm-0 rounded-pill" %>
+        <%= form.text_field :query, placeholder: "Find your Rubberduck...", class: "form-control search-input mr-2 rounded-pill", size: 30 %>
+        <%= form.submit "Search", class: "btn btn-outline-primary rounded-pill search-button" %>
       <% end %>
     </div>
-    <!-- Right-side buttons: Sign Up and User Profile -->
-    <div class="d-flex">
-      <%= link_to 'Float your duck', '#', class: "btn btn-link", style: "text-decoration: none; color: black;" %> <!-- Replace '#' with actual signup link -->
-      <!-- Profile dropdown -->
-      <div class="dropdown mr-2 rounded-pill">
-        <a href="#" class="dropdown-toggle btn btn-outline-secondary rounded-pill" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+    <!-- Right-side buttons: Float Duck and Profile -->
+    <div class="d-flex align-items-center">
+      <!-- Float Duck Link -->
+      <%= link_to 'Float your duck', '#', class: "btn btn-link float-duck-btn" %>
+
+      <!-- Profile Dropdown -->
+      <div class="dropdown">
+        <a href="#" class="dropdown-toggle btn btn-outline-secondary rounded-pill profile-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <%= image_tag "logo-duck.jpg", alt: "User Avatar", class: "rounded-circle", width: 30, height: 30 %>
           Profile
         </a>
-        <div class="dropdown-menu dropdown-menu-right ">
-          <%= link_to 'Profile', '#', class: "dropdown-item" %> <!-- Replace '#' with actual profile link -->
-          <%= link_to 'Settings', '#', class: "dropdown-item" %> <!-- Replace '#' with actual settings link -->
-          <%= link_to 'Logout', '#', method: :delete, class: "dropdown-item" %> <!-- Replace '#' with actual logout link -->
+        <div class="dropdown-menu dropdown-menu-right">
+          <%= link_to 'Profile', '#', class: "dropdown-item" %>
+          <%= link_to 'Settings', '#', class: "dropdown-item" %>
+          <%= link_to 'Logout', '#', method: :delete, class: "dropdown-item" %>
         </div>
       </div>
     </div>

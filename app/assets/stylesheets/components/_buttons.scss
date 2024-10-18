@@ -35,3 +35,20 @@
     font-size: 20px;
   }
 }
+.profile-btn {
+  background-color: lightgoldenrodyellow;
+  color: white;
+  border: 2px solid darkgray;
+  border-radius: 25px;
+  padding: 8px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: $dark-orange;
+    color: white;
+  }
+
+  img {
+    margin-right: 5px;
+  }
+}

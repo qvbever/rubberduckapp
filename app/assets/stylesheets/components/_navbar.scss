@@ -1,21 +1,95 @@
 @import "../config/colors";
 
+/* Navbar Container */
 .costum-navbar {
-  justify-content: space-between;
-  background: $light-orange;
+  background-color: $light-orange;
+  padding: 15px 20px;
   z-index: 10;
+  position: relative;
+}
 
-  .container{
-    display: flex;
-    align-items: center;
+/* Logo Styling */
+.navbar-brand img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+}
+
+/* Search Bar Styling */
+.search-container {
+  flex-grow: 1;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px 15px;
+  border: 2px solid #FFBF78; /* Matches your color theme */
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    border-color: #FF7D29; /* Darker border on focus */
+  }
+}
+
+.search-button {
+  border-radius: 0 25px 25px 0;
+  padding: 10px 20px;
+  border-color: #FFBF78;
+
+  &:hover {
+    background-color: #FF7D29; /* Hover effect */
+    color: white;
+  }
+}
+
+/* Right-side Buttons Styling */
+.float-duck-btn {
+  text-decoration: none;
+  color: black;
+  margin-right: 20px;
+
+  &:hover {
+    color: #FF7D29;
+  }
+}
+
+.profile-btn {
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 5px;
   }
 
+  &:hover {
+    background-color: #FF7D29;
+    color: white;
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+/* Dropdown Menu Styling */
+.dropdown-menu {
+  right: 0; /* Align dropdown to the right */
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .search-input {
+    max-width: 300px; /* Reduce search bar size on smaller screens */
+  }
+
+  .float-duck-btn {
+    margin-right: 10px;
+  }
 }
