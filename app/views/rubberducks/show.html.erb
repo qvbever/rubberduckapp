@@ -42,30 +42,31 @@
 </div>
 
 <%= link_to "Back to All Rubberducks", rubberducks_path, class: "btn btn-secondary" %>
+<% if current_user %>
+  <%= simple_form_for([@rubberduck, @booking]) do |f| %>
+    <% if @booking.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
+        <ul>
+          <% @booking.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-<%= simple_form_for([@rubberduck, @booking]) do |f| %>
-  <% if @booking.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
-      <ul>
-        <% @booking.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+    <div class="form-inputs">
+      <%= f.input :start_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
+    </div>
+
+    <div class="field">
+      <%= f.input :end_date, as: :string, input_html:  { data: { controller: "datepicker" } } %>
+    </div>
+
+    <div class="actions">
+      <%= f.button :submit, "Book Now", class: "btn btn-primary" %>
     </div>
   <% end %>
-
-  <div class="form-inputs">
-    <%= f.input :start_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
-  </div>
-
-  <div class="field">
-    <%= f.input :end_date, as: :string, input_html:  { data: { controller: "datepicker" } }  %>
-  </div>
-
-  <div class="actions">
-    <%= f.button :submit, "Book Now", class: "btn btn-primary" %>
-  </div>
 <% end %>
 <div>
   <p>Owner: <%= link_to "#{@user.name}", user_path(@user) %> </p>

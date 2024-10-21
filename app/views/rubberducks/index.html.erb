@@ -1,5 +1,11 @@
 <h1>Rubberducks</h1>
 
+ <div style="width: 100%; height: 600px;"
+              data-controller="map"
+              data-map-markers-value="<%= @markers.to_json %>"
+              data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+            </div>
+
 <% if @rubberducks.any? %>
   <div class="duck-container">
     <ul class="duck-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px;">

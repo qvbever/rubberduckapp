@@ -22,7 +22,7 @@
         </a>
         <div class="dropdown-menu dropdown-menu-right ">
           <% if user_signed_in? %>
-            <%= link_to 'Profile', user_path(@user), class: "dropdown-item" %> <!-- Replace '#' with actual profile link -->
+            <%= link_to 'Profile', profile_path, class: "dropdown-item" %> <!-- Replace '#' with actual profile link -->
             <%= link_to 'Settings', '#', class: "dropdown-item" %> <!-- Replace '#' with actual settings link -->
             <%= button_to 'Logout',  destroy_user_session_path, method: :delete, class: "dropdown-item" %> <!-- Replace '#' with actual logout link -->
           <% else %>

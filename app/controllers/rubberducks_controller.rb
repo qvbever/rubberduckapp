@@ -5,6 +5,12 @@ class RubberducksController < ApplicationController
 
   def index
     @rubberducks = Rubberduck.all
+    @markers = @rubberducks.geocoded.map do |rubberduck|
+      {
+        lat: rubberduck.latitude,
+        lng: rubberduck.longitude
+      }
+    end
   end
 
   def new

@@ -1,0 +1,29 @@
+
+<h1>Edit Booking for <%= @rubberduck.name %></h1>
+
+<%= form_for @booking, url: booking_path(@booking), method: :patch do |f| %>
+  <% if @booking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
+      <ul>
+        <% @booking.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :start_date %>
+    <%= f.date_field :start_date, value: @booking.start_date, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :end_date %>
+    <%= f.date_field :end_date, value: @booking.end_date, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit "Update Booking", class: "btn btn-primary" %>
+  </div>
+<% end %>
