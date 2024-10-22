@@ -4,7 +4,22 @@ class RubberducksController < ApplicationController
   before_action :set_rubberduck, only: [:edit, :update, :destroy]
 
   def index
-    @rubberducks = Rubberduck.all
+    if params[:query].present?
+      @rubberducks = Rubberduck.search_by_name_city_outfit(params[:query])
+    else
+      @rubberducks = Rubberduck.all
+    end
+
+    # respond_to do |format|
+    #   format.html
+    #   format.js { render partial: "rubberducks/list", locals: { rubberducks: @rubberducks } }
+    # end
+    if request.xhr?
+      render partial: "rubberducks/list", locals: { rubberducks: @rubberducks }
+    else
+      # Render the full index page if it's a regular request
+      render :index
+    end
   end
 
   def new

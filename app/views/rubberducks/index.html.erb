@@ -1,19 +1,4 @@
-<h1>Rubberducks</h1>
+<div data-controller="content" data-content-target="contentContainer">
 
-<% if @rubberducks.any? %>
-  <div class="duck-container">
-    <ul class="duck-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px;">
-      <% @rubberducks.each do |rubberduck| %>
-        <li>
-          <% if params[:user_id] %>
-            <%= render "shared/rubber_duck_card", rubberduck: rubberduck %>
-          <% else %>
-            <%= render "shared/rubber_duck_card", rubberduck: rubberduck %>
-          <% end %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-<% else %>
-  <p>No rubberducks available.</p>
-<% end %>
+  <%= render partial: "rubberducks/list" %>
+</div>
