@@ -71,7 +71,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
 
     .duck-name {
       display: flex;
@@ -83,10 +83,13 @@ body {
     }
 
     .duck-name-text {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis; /* If name is too long, it will truncate with ellipsis */
+      // white-space: nowrap;
+      // overflow: hidden;
+      // text-overflow: ellipsis; /* If name is too long, it will truncate with ellipsis */
       max-width: 100%;
+      white-space: normal;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
   }
     .duck-outfit-text {

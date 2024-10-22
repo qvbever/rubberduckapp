@@ -5,37 +5,38 @@
     <h1><%= @user.name %>'s Profile</p>
   <% end %>
 
+  <%= render partial: "users/user_details" %>
+
+  <div class="boundary"></div>
+
   <% if @user.rubberducks.any? %>
     <% if current_user == @user %>
-      <h2>Your rubberducks</h2>
+      <h2 class="title"><strong>Your listed rubberducks</strong></h2>
     <% else %>
-      <h2>Here are <%= @user.name %>'s current rubberducks</h2>
+      <h2 class="title"><strong>Here are <%= @user.name %>'s listed rubberducks</strong></h2>
     <% end %>
   <% end %>
 <% else %>
-  <h1>Welcome to <%= @user.name %>'s Profile</h1>
+  <h1 class="title">Welcome to <%= @user.name %>'s Profile</h1>
   <% if @user.rubberducks.any? %>
-    <h2>Here are <%= @user.name %>'s current rubberducks</h2>
+    <h2 class="title"><strong>Here are <%= @user.name %>'s listed rubberducks</strong></h2>
   <% end %>
 <% end %>
 
 <% if @user.rubberducks.any? %>
-  <ul style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;">
-    <% @user.rubberducks.each do |rubberduck| %>
-      <li>
-        <% if user_signed_in? %>
-          <%= render "shared/rubber_duck_card", rubberduck: rubberduck %>
-        <% else %>
-          <%= render "shared/rubber_duck_card", rubberduck: rubberduck %>
-        <% end %>
-      </li>
-    <% end %>
-  </ul>
+  <div class="duck-container">
+    <ul class="duck-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px;">
+      <% @user.rubberducks.each do |rubberduck| %>
+        <li>
+          <% if user_signed_in? %>
+            <%= render "shared/rubber_duck_card", rubberduck: rubberduck %>
+          <% else %>
+            <%= render "shared/rubber_duck_card", rubberduck: rubberduck %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 <% else %>
   <p>No rubberducks available.</p>
 <% end %>
-
-<% if current_user == @user %>
-  <%= link_to "Add a rubberduck", new_user_rubberduck_path(@user)  %>
-<% end %>
-<%= link_to "Back to Home Page", rubberducks_path, class: "btn btn-secondary" %>

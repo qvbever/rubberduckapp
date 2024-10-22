@@ -1,0 +1,36 @@
+.continent-container {
+  padding: 20px;
+
+.continent {
+  color:  #FFBF78;
+}
+
+.continent-row {
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.col-auto {
+  text-align: center;
+  margin-right: 32px;
+  margin-left: 32px;
+  transition: 0.3s ease;
+
+  &:hover {
+    color: blue;
+    cursor: pointer;
+    border-bottom: 1px solid blue;
+  }
+
+  p {
+    font-size: 0.75rem;
+  }
+}
+}
+
+.icon-border {
+  color: blue;
+  border-bottom: 1px solid blue;
+}
