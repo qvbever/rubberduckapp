@@ -13,6 +13,7 @@
   width: 75px;
   height: 75px;
   object-fit: cover;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); // Add shadow around the avatar for emphasis */
 }
 
 /* Search Bar Styling */
@@ -24,7 +25,7 @@
   width: 100%;
   max-width: 500px;
   padding: 10px 15px;
-  border: 2px solid #FFBF78; /* Matches your color theme */
+  border: 2px solid #FFBF78;
   border-radius: 25px 0 0 25px;
   outline: none;
   font-size: 1rem;
@@ -37,45 +38,56 @@
 }
 
 .search-button {
-  border-radius: 0 25px 25px 0;
-  padding: 10px 20px;
-  border-color: #FFBF78;
+  /* Higher specificity to ensure styles are applied */
+  .costum-navbar & {
+    @extend .button;
+    border-radius: 0 25px 25px 0;
+    border-color: #FFBF78;
 
-  &:hover {
-    background-color: #FF7D29; /* Hover effect */
-    color: white;
+    &:hover {
+      background-color: #FF7D29;
+      color: white;
+    }
   }
 }
 
 /* Right-side Buttons Styling */
 .float-duck-btn {
-  text-decoration: none;
-  color: black;
-  margin-right: 20px;
+  /* Higher specificity */
+  .costum-navbar & {
+    @extend .button;
+    background-color: transparent;
+    color: black;
+    margin-right: 20px;
 
-  &:hover {
-    color: #FF7D29;
+    &:hover {
+      color: #FF7D29;
+    }
   }
 }
 
 .profile-btn {
-  padding: 8px 15px;
-  display: flex;
-  align-items: center;
+  /* Higher specificity */
+  .costum-navbar & {
+    @extend .profile-btn;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
 
-  img {
-    margin-right: 5px;
-  }
+    img {
+      margin-right: 5px;
+    }
 
-  &:hover {
-    background-color: #FF7D29;
-    color: white;
+    &:hover {
+      background-color: #FF7D29;
+      color: white;
+    }
   }
 }
 
 /* Dropdown Menu Styling */
 .dropdown-menu {
-  right: 0; /* Align dropdown to the right */
+  right: 0;
 }
 
 /* Responsive Styles */
@@ -86,7 +98,7 @@
   }
 
   .search-input {
-    max-width: 300px; /* Reduce search bar size on smaller screens */
+    max-width: 300px;
   }
 
   .float-duck-btn {

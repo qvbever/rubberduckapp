@@ -5,9 +5,17 @@
 
 // External libraries
 @import "bootstrap";
+
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-
+@import "components/buttons";  // Buttons
 @import "components/navbar";
+@import "components/footer";
+@import "components/reviews";
 @import "components/rubber_duck_cards";
+@import "pages/show"; // Styles for rubberduck show page
+
+body {
+  background-color: #FEFFD2 !important; // Use !important to ensure it isn't overridden
+}

@@ -8,7 +8,7 @@
     <div class="search-container mx-auto">
       <%= form_with url: root_path, method: :get, local: true, class: "form-inline d-flex justify-content-center align-items-center" do |form| %>
         <%= form.text_field :query, placeholder: "Find your Rubberduck...", class: "form-control search-input mr-2 rounded-pill", size: 30 %>
-        <%= form.submit "Search", class: "btn btn-outline-primary rounded-pill search-button" %>
+        <%= form.submit "Search", class: "search-button" %>
       <% end %>
     </div>
     <!-- Right-side buttons: Sign Up and User Profile -->
@@ -16,9 +16,9 @@
       <%= link_to 'Float your duck', new_user_session_path, class: "btn btn-link", style: "text-decoration: none; color: black;" %> <!-- Replace '#' with actual signup link -->
       <!-- Profile dropdown -->
       <div class="dropdown mr-2 rounded-pill">
-        <a href="#" class="dropdown-toggle btn btn-outline-secondary rounded-pill" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="dropdown-toggle profile-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <%= image_tag "logo-duck.jpg", alt: "User Avatar", class: "rounded-circle", width: 30, height: 30 %>
-          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-bars"></i> <!-- Updated to FontAwesome ellipsis icon -->
         </a>
         <div class="dropdown-menu dropdown-menu-right ">
           <% if user_signed_in? %>

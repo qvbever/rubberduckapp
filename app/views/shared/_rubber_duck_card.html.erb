@@ -2,25 +2,30 @@
   <%= image_tag "rubberducks/#{rubberduck.image_url}", class: "duck-image" %>
 
   <div class="card-info">
+    <!-- Rating Stars: Positioned above the name and aligned to the right -->
+    <div class="duck-rating">
+      <%= render partial: "shared/rating_stars", locals: { rating: rubberduck.rating } %>
+    </div>
+
     <div class="duck-header">
       <h3 class="duck-name">
         <span class="duck-name-text"><%= rubberduck.name %></span>
-        <span class="duck-outfit-text">
-          <i class="fas fa-tshirt"></i> <!-- Outfit icon -->
-          <%= rubberduck.outfit %>
-        </span>
       </h3>
-
-      <div class="duck-rating">
-        <%= render partial: "shared/rating_stars", locals: { rating: rubberduck.rating } %>
-      </div>
     </div>
 
+    <!-- Outfit moved outside the header -->
+    <p class="duck-outfit-text">
+      <i class="fas fa-tshirt"></i> <!-- Outfit icon -->
+      <%= rubberduck.outfit %>
+    </p>
+
+    <!-- City Information -->
     <p class="duck-city">
       <i class="fas fa-map-marker-alt"></i> <!-- Location icon -->
       <%= rubberduck.city %>
     </p>
 
+    <!-- Price Information -->
     <p class="duck-price">
       <i class="fas fa-bath"></i> <!-- Bathtub icon -->
       €<%= rubberduck.price %> per Bath

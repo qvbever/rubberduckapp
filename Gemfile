@@ -50,6 +50,7 @@ gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
 gem "devise"
 gem 'nokogiri'
+gem 'faker'
 
 group :development, :test do
   gem "dotenv-rails"

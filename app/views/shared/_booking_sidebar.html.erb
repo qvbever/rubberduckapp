@@ -1,0 +1,42 @@
+<div class="card booking-summary p-4 shadow-sm sticky-top">
+  <h3 class="font-weight-bold">€<%= @rubberduck.price %> per bath</h3>
+
+  <!-- Splash Dates -->
+  <div class="d-flex justify-content-between mb-4">
+    <div>Splash-In</div>
+    <div id="start-date-summary">--</div>
+  </div>
+  <div class="d-flex justify-content-between mb-4">
+    <div>Splash-Out</div>
+    <div id="end-date-summary">--</div>
+  </div>
+
+  <!-- Summary Information -->
+  <p><i class="fas fa-info-circle"></i> Available for <span id="bath-duration">--</span> days</p>
+
+  <!-- Cost Breakdown -->
+  <div class="cost-breakdown">
+    <p id="bath-cost">
+      € <%= @pricing_info[:price_per_bath] || '--' %>
+      x <%= params[:num_days] || '--' %> baths =
+      € <%= @pricing_info[:total_bath_cost] || '--' %>
+    </p>
+
+    <p>Cleaning fee:
+      <span id="cleaning-fee">€ <%= @pricing_info[:cleaning_fee] || '--' %></span>
+    </p>
+
+    <p>Duck service fee:
+      <span id="service-fee">€ <%= @pricing_info[:service_fee] || '--' %></span>
+    </p>
+
+    <p class="font-weight-bold">Total:
+      <span id="total-cost">€ <%= @pricing_info[:total_cost] || '--' %></span>
+    </p>
+  </div>
+
+  <!-- Book Now Button -->
+  <%= simple_form_for([@rubberduck, @booking]) do |f| %>
+    <%= f.button :submit, "Book Now", class: "button primary", aria: { label: "Confirm booking for rubber duck bath" } %>
+  <% end %>
+</div>
