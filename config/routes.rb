@@ -19,5 +19,8 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create, :index]
   end
 
+  resources :rubberducks do
+    get 'calculate_price', on: :member
+  end
   resources :bookings, only: [:destroy, :edit, :update]
 end

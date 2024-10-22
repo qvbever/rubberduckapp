@@ -1,14 +1,23 @@
-// Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
-import "@hotwired/turbo-rails"
-import "controllers"
-import "@popperjs/core"
-import "bootstrap"
+// Import Turbo, Stimulus, Popper.js, and Bootstrap globally
+import "@hotwired/turbo-rails";
+import { Application } from "@hotwired/stimulus";
+import { autoloadControllersFrom } from "@hotwired/stimulus-loading";
+import "@popperjs/core";
+import "bootstrap";
+import "@fortawesome/fontawesome-free/js/all";
 import flatpickr from "flatpickr";
 
-document.addEventListener('turbo:load', function() {
-  flatpickr('.datepicker', {
-    enableTime: false,       // Disable time picker
-    dateFormat: 'Y/m/d',     // Format: Day/Month/Year
-    minDate: 'today',        // Disable past dates
-  });
+// Initialize Stimulus controllers
+const application = Application.start();
+autoloadControllersFrom("controllers", application); // Correct autoloading of controllers
+application.debug = false; // Disable debugging in production
+window.Stimulus = application; // Optional: Expose Stimulus globally
+
+// Conditionally load the `show.js` script only on the Show Page
+document.addEventListener('turbo:load', () => {
+  if (document.querySelector('.show-page')) {
+    import("./controllers/show").then(({ loadShowPage }) => {
+      loadShowPage();  // Dynamically loads show.js
+    });
+  }
 });

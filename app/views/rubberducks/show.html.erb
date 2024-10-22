@@ -1,44 +1,105 @@
-<div class="container show-page">
-  <!-- Image Section -->
-  <div class="main-image">
-    <%= image_tag "rubberducks/#{@rubberduck.image_url}", alt: @rubberduck.name, class: "img-fluid" %>
+<div class="container show-page" data-rubberduck-id="<%= @rubberduck.id %>">
+  <!-- Title Container -->
+  <h1 class="duck-title font-weight-bold mb-3"><%= @rubberduck.name %> the <%= @rubberduck.outfit %> duck in <%= @rubberduck.city %> </h1>
+
+  <!-- Main Image -->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="container duck-image-container mb-4">
+        <%= image_tag "rubberducks/#{@rubberduck.image_url}", alt: @rubberduck.name, class: "img-fluid rounded" %>
+      </div>
+    </div>
   </div>
 
-  <!-- Duck Details Section -->
-  <div class="row details-section mt-4">
+  <!-- Sidebar and Content Row -->
+  <div class="row">
+    <!-- Left Content: Details, Description, Datepicker -->
     <div class="col-md-8">
-      <!-- Duck Name and Rating -->
-      <div class="duck-header d-flex justify-content-between align-items-center">
-        <h1 class="duck-name"><%= @rubberduck.name %></h1>
-        <div class="duck-rating">
-          <%= render partial: "shared/rating_stars", locals: { rating: @rubberduck.rating } %>
+      <!-- Subtitle Container -->
+      <h4 class="font-weight-bold">
+        Get to know <%=@rubberduck.name%> 🦆
+      </h4>
+
+      <!-- Description Container -->
+      <div class="duck-description mb-4">
+        <p class="text-secondary"><%= @rubberduck.description %></p>
+      </div>
+
+      <!-- Datepicker Fields -->
+      <div class="container">
+        <div class="datepicker-section mb-4">
+          <label for="start-date">Start Date:</label>
+          <input type="text" id="start-date" class="datepicker" placeholder="Select start date" />
+
+          <label for="end-date">End Date:</label>
+          <input type="text" id="end-date" class="datepicker" placeholder="Select end date" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Sidebar: Booking Sidebar -->
+    <div class="col-md-4">
+      <%= render 'shared/booking_sidebar' %>
+    </div>
+  </div>
+
+  <!-- Reviews Section -->
+  <div class="reviews-section mt-5">
+    <h4 class="font-weight-bold mb-4">Reviews 📝</h4>
+
+    <div class="reviews-container">
+      <div class="row">
+        <div class="col-md-6">
+          <%= render 'shared/review', review: @reviews[0] %>
+        </div>
+        <div class="col-md-6">
+          <%= render 'shared/review', review: @reviews[1] %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <%= render 'shared/review', review: @reviews[2] %>
+        </div>
+        <div class="col-md-6">
+          <%= render 'shared/review', review: @reviews[3] %>
         </div>
       </div>
 
-      <!-- Location -->
-      <p class="duck-location">
-        <i class="fas fa-map-marker-alt"></i> <%= @rubberduck.city %>
-      </p>
-
-      <!-- Description -->
-      <div class="duck-description">
-        <h4>Description</h4>
-        <p>some description</p>
+      <!-- More Reviews Section -->
+      <div id="more-reviews" style="display:none;">
+        <div class="row">
+          <% @reviews[4..-1].each do |review| %>
+            <div class="col-md-6 mb-3">
+              <%= render 'shared/review', review: review %>
+            </div>
+          <% end %>
+        </div>
       </div>
 
-      <!-- Reviews -->
-      <div class="reviews mt-5">
-        <h4>Reviews</h4>
-      </div>
-    </div>
-
-    <!-- Booking Sidebar -->
-    <div class="col-md-4 booking-section sticky-top">
-      <div class="booking-card">
-        <h3>€<%= @rubberduck.price %> per bath</h3>
-      </div>
+      <button id="show-more-reviews" class="btn btn-secondary btn-block mt-3">Show more reviews</button>
     </div>
   </div>
+
+  <script>
+    document.getElementById('show-more-reviews').addEventListener('click', function() {
+      document.getElementById('more-reviews').style.display = 'block';
+      this.style.display = 'none';
+    });
+  </script>
+
+  <!-- Map Section -->
+  <div class="map-section mt-5">
+    <h4 class="font-weight-bold">Where to find this Duck?</h4>
+    <div id="map" style="height: 400px; width: 100%;">
+      <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="400" style="border:0;" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-5 pt-4 border-top">
+    <p>&copy; <%= Time.now.year %> Rubberduck Rentals. All rights reserved.</p>
+    <%= link_to "Back to All Ducks", rubberducks_path, class: "btn btn-secondary" %>
+  </footer>
 </div>
 
 <%= link_to "Back to All Rubberducks", rubberducks_path, class: "btn btn-secondary" %>

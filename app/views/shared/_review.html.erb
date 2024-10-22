@@ -1,0 +1,21 @@
+<% if review.present? %>
+<div class="card mb-4 p-3 shadow-sm rounded-lg">
+  <div class="d-flex justify-content-between align-items-center">
+    <div>
+      <strong><%= review[:author] %></strong>
+    </div>
+    <!-- Star Rating -->
+    <div>
+      <% review[:rating].to_i.times do %>
+        <i class="fa fa-star text-warning"></i> <!-- Star icon for rating -->
+      <% end %>
+      <% (5 - review[:rating].to_i).times do %>
+        <i class="fa fa-star text-secondary"></i> <!-- Empty star for remaining -->
+      <% end %>
+    </div>
+  </div>
+  <p class="text-secondary mt-3"><%= review[:content] %></p>
+</div>
+<% else %>
+  <p>No review available.</p>
+<% end %>
