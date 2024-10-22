@@ -15,7 +15,7 @@
     <!-- Right-side buttons: Sign Up and User Profile -->
     <div class="d-flex">
       <% if user_signed_in? %>
-          <%= link_to 'Float your duck', new_user_rubberduck_path(@user), class: "float-duck-btn btn btn-link" %> <!-- Replace '#' with actual signup link -->
+          <%= link_to 'Float your duck', new_user_rubberduck_path(current_user), class: "float-duck-btn btn btn-link" %> <!-- Replace '#' with actual signup link -->
       <% else %>
         <%= link_to 'Float your duck', new_user_session_path, class: "btn btn-link", style: "text-decoration: none; color: black; font-weight: bold;" %>
       <% end %>

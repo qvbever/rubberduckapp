@@ -1,5 +1,9 @@
 <a href="<%= rubberduck_path(rubberduck) %>" class="rubberduck-card">
-  <%= image_tag "rubberducks/#{rubberduck.image_url}", class: "duck-image" %>
+  <% if rubberduck.image_url %>
+    <%= image_tag "rubberducks/#{rubberduck.image_url}", class: "duck-image" %>
+  <% else %>
+    <%= image_tag "rubberducks/mermaid_puddle", class: "duck-image" %>
+  <% end %>
 
   <div class="card-info">
     <div class="duck-header">

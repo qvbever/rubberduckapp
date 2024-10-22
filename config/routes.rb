@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  get "/profile", to: "pages#profile", as: :profile
 
   resources :users do
     resources :rubberducks
@@ -17,4 +18,6 @@ Rails.application.routes.draw do
   resources :rubberducks, only: [:index, :show] do
     resources :bookings, only: [:new, :create, :index]
   end
+
+  resources :bookings, only: [:destroy, :edit, :update]
 end

@@ -1,5 +1,5 @@
 class Rubberduck < ApplicationRecord
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
   belongs_to :user
 
   include PgSearch::Model
@@ -8,4 +8,7 @@ class Rubberduck < ApplicationRecord
   using: {
     tsearch: { prefix: true } # <-- now `superman batm` will return something!
   }
+  geocoded_by :city
+  after_validation :geocode, if:
+  :will_save_change_to_city?
 end

@@ -10,15 +10,19 @@ class RubberducksController < ApplicationController
       @rubberducks = Rubberduck.all
     end
 
+    @markers = @rubberducks.geocoded.map do |rubberduck|
+      {
+        lat: rubberduck.latitude,
+        lng: rubberduck.longitude
+      }
+    end
+
     # respond_to do |format|
     #   format.html
     #   format.js { render partial: "rubberducks/list", locals: { rubberducks: @rubberducks } }
     # end
     if request.xhr?
       render partial: "rubberducks/list", locals: { rubberducks: @rubberducks }
-    else
-      # Render the full index page if it's a regular request
-      render :index
     end
   end
 
