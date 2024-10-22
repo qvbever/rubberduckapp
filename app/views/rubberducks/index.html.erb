@@ -1,19 +1,13 @@
+
 <h1>Rubberducks</h1>
 
-<% if @rubberducks.any? %>
-  <div class="duck-container">
-    <ul class="duck-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px;">
-      <% @rubberducks.each do |rubberduck| %>
-        <li>
-          <% if params[:user_id] %>
-            <%= render "shared/rubber_duck_card", rubberduck: rubberduck %>
-          <% else %>
-            <%= render "shared/rubber_duck_card", rubberduck: rubberduck %>
-          <% end %>
-        </li>
-      <% end %>
-    </ul>
+  <div style="width: 100%; height: 600px; margin: 20px 0px; border-radius: 30px;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
-<% else %>
-  <p>No rubberducks available.</p>
-<% end %>
+
+<div data-controller="content" data-content-target="contentContainer">
+
+  <%= render partial: "rubberducks/list" %>
+</div>

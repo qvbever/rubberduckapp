@@ -18,4 +18,7 @@
 
 body {
   background-color: #FEFFD2 !important; // Use !important to ensure it isn't overridden
+  padding-top: 150px;
 }
+
+@import url("https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css");

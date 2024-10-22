@@ -115,6 +115,9 @@
   /* Duck header: Name positioned below the rating */
   .duck-header {
     margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+    // margin-bottom: 10px;
 
     .duck-name {
       font-size: 1.25rem;
@@ -122,6 +125,17 @@
       font-weight: 600;
       margin-left: 20px;
       display: block; /* Ensure the name is on its own line */
+      margin-left: 5px;
+    }
+
+    .duck-name-text {
+      // white-space: nowrap;
+      // overflow: hidden;
+      // text-overflow: ellipsis; /* If name is too long, it will truncate with ellipsis */
+      max-width: 100%;
+      white-space: normal;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
   }
 

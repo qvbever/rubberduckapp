@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  get "/profile", to: "pages#profile", as: :profile
 
   resources :users do
     resources :rubberducks
@@ -21,4 +22,5 @@ Rails.application.routes.draw do
   resources :rubberducks do
     get 'calculate_price', on: :member
   end
+  resources :bookings, only: [:destroy, :edit, :update]
 end

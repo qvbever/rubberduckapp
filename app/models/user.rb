@@ -7,5 +7,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
         :recoverable, :rememberable
   has_many :bookings
+
+  def average_rubberduck_rating
+    return 0 if rubberducks.empty?
+    rubberducks.average(:rating).to_f.round(2)
+  end
 end
 # comment

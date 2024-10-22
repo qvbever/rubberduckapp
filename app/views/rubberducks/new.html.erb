@@ -2,5 +2,9 @@
 
 <%= render "form", user: @user, rubberduck: @rubberduck %>
 
-<%= link_to "Go back your profile", user_path(current_user), class: "btn btn-primary" %>
-<%= link_to "Go back to the Home Page", rubberducks_path, class: "btn btn-primary" %>
+<div id="new-links">
+  <% if user_signed_in? %>
+    <%= link_to "Go to your profile", user_path(current_user), class: "btn btn-primary" %>
+  <% end %>
+  <%= link_to "Go back to the Home Page", rubberducks_path, class: "btn btn-primary" %>
+</div>

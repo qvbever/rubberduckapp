@@ -1,0 +1,26 @@
+<h1>Your Profile and bookings overview</h1>
+<h2>Username: <%= current_user.name %></h2>
+<br>
+<% if @bookings.any? %>  <!-- Check if there are any bookings -->
+  <h3>Your bookings:</h3>
+  <br>
+  <% @bookings.each do |booking| %>
+    <!-- Calculating the length of the booking -->
+    <% total_nights = (booking.end_date - booking.start_date).to_i %>
+    <!-- Calculate the total price -->
+    <% total_price = total_nights * booking.rubberduck.price %>
+
+    <p>Rubberduck name: <%= booking.rubberduck.name %></p>
+    <p>Start Date: <%= booking.start_date %></p>
+    <p>End Date: <%= booking.end_date %></p>
+    <p>Booked for: <%= total_nights %> nights</p>
+    <p>Total price: $<%= total_price %></p>
+
+    <!-- Action buttons for Delete and Edit -->
+    <%= link_to "Delete", booking_path(booking), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-danger" %>
+    <%= link_to "Edit Booking", edit_booking_path(booking), class: "btn btn-warning" %>
+    <br><br>
+  <% end %>
+<% else %>
+  <h3>You currently have no active bookings</h3>
+<% end %>

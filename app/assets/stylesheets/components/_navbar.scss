@@ -64,7 +64,16 @@
       color: #FF7D29;
     }
   }
+  text-decoration: none;
+  color: black;
+  margin-right: 20px;
+  transition: 0.3s ease;
+
+  &:hover {
+    color: white;
+  }
 }
+
 
 .profile-btn {
   /* Higher specificity */
@@ -104,4 +113,8 @@
   .float-duck-btn {
     margin-right: 10px;
   }
+}
+
+.continent {
+  color: black;
 }

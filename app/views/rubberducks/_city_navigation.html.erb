@@ -1,0 +1,26 @@
+<div class="container continent-container">
+  <div class="row d-flex g-0 continent-row" data-controller="border">
+    <div class="col-auto icon" onclick="toggleBorder(event)" data-border-target="icon"
+        data-action="click->content#search" data-query="t">
+      <i class="fas fa-earth-europe continent fa-lg"></i>
+      <p>Europe</p>
+    </div>
+    <div class="col-auto icon" onclick="toggleBorder(event)" data-border-target="icon"
+        data-action="click->content#search" data-query="C">
+      <i class="fas fa-earth-americas continent fa-lg"></i>
+      <p>North America</p>
+    </div>
+    <div class="col-auto continent-link">
+      <i class="fas fa-earth-asia continent fa-lg"></i>
+      <p>Asia</p>
+    </div>
+    <div class="col-auto">
+      <i class="fas fa-earth-oceania continent fa-lg"></i>
+      <p>Oceania</p>
+    </div>
+    <div class="col-auto">
+      <i class="fas fa-earth-americas continent fa-lg"></i>
+      <p>South America</p>
+    </div>
+  </div>
+</div>

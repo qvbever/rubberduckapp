@@ -38,9 +38,9 @@
   &.small {
     padding: 5px 10px;
     font-size: 12px;
-    background-color: $light-yellow; // Light yellow for small buttons
+    //background-color: $light-yellow; // Light yellow for small buttons
     &:hover {
-      background-color: darken($light-yellow, 10%); // Darker yellow on hover for small buttons
+      //background-color: darken($light-yellow, 10%); // Darker yellow on hover for small buttons
       color: white; // Ensure text color remains white
     }
   }
@@ -57,7 +57,7 @@
 }
 
 .profile-btn {
-  background-color: $light-yellow; // Light yellow for the profile button
+  //background-color: $light-yellow; // Light yellow for the profile button
   color: white;
   border: 2px solid darkgray;
   border-radius: 25px;
