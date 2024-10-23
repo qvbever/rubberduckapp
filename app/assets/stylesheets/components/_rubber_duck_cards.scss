@@ -85,11 +85,22 @@
   transform: scale(1.02); /* Slight zoom on hover */
 }
 
+h3 {
+  margin-bottom: 0px !important;
+margin-top: 10px !important;
+}
 /* Card info styling */
 .card-info {
   display: flex;
   flex-direction: column; /* Stack elements vertically */
   justify-content: flex-start; /* Align sections to the left */
+  position: relative; /* Position rating absolutely inside card-info */
+
+  h3.duck-name {
+    margin-bottom: 0px !important;
+  margin-top: 10px !important;
+  }
+
 
    /* Rating Stars: Positioned above the name, aligned to the right */
    .duck-rating {
@@ -98,8 +109,9 @@
     justify-content: flex-end; /* Align rating to the right */
     align-items: center;
     white-space: nowrap; /* Prevent wrapping */
-    margin-right: 10px; /* Align to the right */
-
+    position: absolute; /* Position the rating absolutely */
+    top: 0; /* Align it to the top */
+    right: 10px; /* Align to the right */
     margin-top: 10px;
 
     i {
@@ -114,10 +126,10 @@
 
   /* Duck header: Name positioned below the rating */
   .duck-header {
-    margin-bottom: 10px;
-    justify-content: space-between;
-    align-items: flex-start;
-    // margin-bottom: 10px;
+    margin-top: 25px; /* Add space to account for the rating above */
+    padding-top: 10px; /* Ensure some padding between rating and name */
+    margin-bottom: 0px !important;
+margin-top: 10px !important;
 
     .duck-name {
       font-size: 1.25rem;
@@ -125,42 +137,32 @@
       font-weight: 600;
       margin-left: 20px;
       display: block; /* Ensure the name is on its own line */
-      margin-left: 5px;
-    }
-
-    .duck-name-text {
-      // white-space: nowrap;
-      // overflow: hidden;
-      // text-overflow: ellipsis; /* If name is too long, it will truncate with ellipsis */
-      max-width: 100%;
-      white-space: normal;
-      overflow-wrap: break-word;
-      word-break: break-word;
+      margin-bottom: 0px !important;
     }
   }
 
   /* Outfit, city, and price styling */
   .duck-outfit-text, .duck-city, .duck-price {
-    display: flex;
+    display: inline-flex; /* inline-flex to align icon and text in a row */
     align-items: center;
     margin-bottom: 10px;
     margin-left: 20px;
 
     i {
-      margin-right: 8px;
+      margin-right: 8px; /* Space between the icon and the text */
       color: #FFBF78;
     }
   }
 
   /* Outfit specific adjustments */
   .duck-outfit-text {
-    color: #777777;
+    color: #666666;
     font-size: 1rem;
   }
 
   /* City specific adjustments */
   .duck-city {
-    color: #666666 !important;
+    color: #666666;
     font-size: 1rem;
   }
 
