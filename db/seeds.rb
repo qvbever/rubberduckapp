@@ -1,11 +1,14 @@
 require 'json'
 
+User.create!(email:"marko@gmail.com", password:"111111")
+User.create!(email:"danko@gmail.com", password:"111111")
+
 # Load scraped rubber duck data
 if File.exist?("rubberducks.json")
   rubberduck_data = JSON.parse(File.read("rubberducks.json"), symbolize_names: true)
 
   # Load existing descriptions from the JSON file (if present)
-  description_file = 'db/duck_descriptions.json' 
+  description_file = 'db/duck_descriptions.json'
   description_data = if File.exist?(description_file)
                        JSON.parse(File.read(description_file))
                      else
