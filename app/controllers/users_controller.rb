@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
   def show
     @rubberducks = Rubberduck.all
+    @bookings = Booking.all
   end
 
   private

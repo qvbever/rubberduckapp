@@ -13,13 +13,13 @@
     <% if current_user == @user %>
       <h2 class="title"><strong>Your listed rubberducks</strong></h2>
     <% else %>
-      <h2 class="title"><strong>Here are <%= @user.name %>'s listed rubberducks</strong></h2>
+      <h2 class="title"><strong><%= @user.name %>'s listed rubberducks</strong></h2>
     <% end %>
   <% end %>
 <% else %>
   <h1 class="title">Welcome to <%= @user.name %>'s Profile</h1>
   <% if @user.rubberducks.any? %>
-    <h2 class="title"><strong>Here are <%= @user.name %>'s listed rubberducks</strong></h2>
+    <h2 class="title"><strong><%= @user.name %>'s listed rubberducks</strong></h2>
   <% end %>
 <% end %>
 

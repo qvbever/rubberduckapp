@@ -1,21 +1,39 @@
 <div class="container mt-4">
   <div class="row d-flex">
 
-     <div class="col-md-4 stats">
-      <ul>
-        <li><strong><%= @user.rubberducks.count %></strong> listed rubberducks</li>
-        <li><%= @user.average_rubberduck_rating %> <i class="fas fa-star fa-lg"></i> Rating </li>
-        <li>Verified User <i class="fas fa-check fa-lg"></i></li>
-      </ul>
+    <div class="col-md-4 stats">
+      <div class="user-details detail">
+        <ul>
+          <li><strong><%= @user.rubberducks.count %></strong> listed rubberducks</li>
+          <li><%= @user.average_rubberduck_rating %> <i class="fas fa-star fa-lg"></i> Rating </li>
+          <li>Verified User <i class="fas fa-check fa-lg"></i></li>
+        </ul>
+      </div>
+      <% if @user == current_user %>
+        <div class="detail">
+          <ul>
+            <li><strong><%= @user.bookings.count %></strong> current bookings</li>
+            <li><%= link_to "Your booking details", profile_path(current_user), style: "text-decoration: none" %></li>
+          </ul>
+        </div>
+      <% end %>
     </div>
 
-    <div class="col-md-8 about-me">
-      <h2><strong>About Me</strong></h2>
-      <% if @user.description.present? %>
-        <p><%= @user.description %></p>
-      <% else %>
-        <p><em>No description provided yet.</em></p>
-      <% end %>
+    <div class="col-md-8 about-me d-flex flex-column">
+      <div>
+        <h2><strong>About Me</strong></h2>
+        <% if @user.description.present? %>
+          <p><%= @user.description %></p>
+        <% else %>
+          <p><em>No description provided yet.</em></p>
+        <% end %>
+      </div>
+      <div class="detail mt-auto">
+        <% favourite_rubberduck = @user.rubberducks.sample %>
+        <ul id="fav-duck">
+          <li><span id="fav-duck-name">Favourite rubberduck </span> : <%= link_to "#{favourite_rubberduck.name}", rubberduck_path(favourite_rubberduck), style: "text-decoration: none" %></li>
+        </ul>
+      <div>
     </div>
   </div>
 </div>
