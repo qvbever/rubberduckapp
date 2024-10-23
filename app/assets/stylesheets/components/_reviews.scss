@@ -1,0 +1,38 @@
+.reviews-section {
+  .row {
+    margin-bottom: 20px;
+  }
+
+  .card {
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .fa-star {
+      font-size: 1rem;
+      color: #ffcc00;
+    }
+
+    .fa-star.text-secondary {
+      color: #ddd;
+    }
+
+    strong {
+      font-size: 1.1rem;
+    }
+
+    .text-muted {
+      font-size: 0.9rem;
+    }
+  }
+
+  #show-more-reviews {
+    margin-top: 20px;
+  }
+}

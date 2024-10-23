@@ -1,0 +1,306 @@
+[
+  {
+      "outfit": "Pirate",
+      "description": "Ahoy there! {{name}} is ready to set sail on the high seas of your bathtub. Dressed in a full pirate outfit, complete with an eyepatch and a little rubber cutlass, this duck is here to make bath time an adventure. Be prepared for quacky treasure hunts and the occasional 'arrr' when you least expect it. Who knew pirates could be this adorable? Just be careful not to let {{name}} commandeer your soap!"
+  },
+  {
+      "outfit": "Royal Gown",
+      "description": "Make way for {{name}}, the most regal duck in all the land! With her elegant royal gown and sparkling tiara, she transforms your tub into a royal palace. She's here to make every bubble bath feel like a ball, complete with rubber courtiers and a good splash. Just don't be surprised if she starts issuing royal proclamations about bubble distribution. Long live {{name}}, the queen of bath time!"
+  },
+  {
+      "outfit": "Tracksuit",
+      "description": "Ready to get pumped? {{name}} is here to help you train-rubber ducky style! Dressed in a sporty tracksuit, this duck is all about motivation, whether it's squeezing in some extra bubbles or perfecting your splash technique. Expect lots of quacky pep talks and some serious encouragement to make bath time the most fun workout you've ever had. Let's go, team-you got this, one splash at a time!"
+  },
+  {
+      "outfit": "Trench Coat and Magnifying Glass",
+      "description": "There's a mystery in the tub, and {{name}} is on the case! With a classic trench coat and magnifying glass, this duck is determined to get to the bottom of any bath-time mysteries. Is that missing soap bar a case of foul play? Are the bubbles hiding secrets? No mystery is too small for {{name}}. Just be ready for some quacky observations and plenty of adorable sleuthing!"
+  },
+  {
+      "outfit": "Sequin Jumpsuit",
+      "description": "Get ready to groove with {{name}}! Sporting a shiny sequin jumpsuit, this duck turns your bath into a disco party. Bath time just got a whole lot funkier with quacky dance moves and an upbeat vibe that's all about splashing to the rhythm. So turn on your favorite tunes, get those bubbles going, and let {{name}} show you how to boogie. Warning: You may experience an uncontrollable urge to dance in the tub!"
+  },
+  {
+      "outfit": "Horror",
+      "description": "All hail {{name}}, the spookiest royal in the tub! Dressed in a horror-themed outfit, {{name}} brings a delightful chill to bath time. She's got a crown with a creepy twist and a penchant for mysterious bubbles that seem to appear out of nowhere. If you like your bath time with a side of eerie fun, {{name}} is your duck. Just don't be surprised if things go 'bump' in the tub-it's all part of the royal scare!"
+  },
+  {
+      "outfit": "Grim Reaper",
+      "description": "Meet {{name}}, the Grim Reaper of the tub-but fear not, this duck is all about the fun side of the afterlife! With a tiny scythe and a spooky cloak, {{name}} adds a playful twist to bath time. Expect some quacky reaping of soap bubbles and a few ghostly giggles along the way. {{name}} is here to remind you that even the Grim Reaper can have a sense of humor-especially when it's time for a good soak!"
+  },
+  {
+      "outfit": "Ghost",
+      "description": "Boo! {{name}} the Ghost is here to haunt your tub-in the cutest way possible. Draped in a ghostly sheet, this duck loves to pop up unexpectedly from beneath the bubbles. {{name}} will make sure your bath is filled with spooky giggles and a few surprise splashes. If you love a good ghost story, {{name}} is the perfect bath-time companion. Just be ready for some quacky ghost sounds!"
+  },
+  {
+      "outfit": "Skeleton",
+      "description": "Introducing {{name}}, the bravest (and boniest) knight of the tub! Dressed in a skeleton outfit, this duck is ready to rattle some bones and defend your bath from boredom. {{name}} is all about the thrills and chills, bringing a touch of medieval spookiness to your soak. Don't let his bony appearance fool you-he's got a heart of rubber and a quack that's full of charm. Onward to bath-time adventure!"
+  },
+  {
+      "outfit": "Glitter Devil",
+      "description": "{{name}} the Glitter Devil is here to add a little mischief to your bath! With sparkly horns and a cheeky grin, {{name}} knows how to make bath time a blast. This duck loves to stir up a little trouble-like hiding your soap or making extra-big splashes-but it's all in good fun. If you're ready for a glittery, devilish good time, {{name}} is the perfect bath-time partner. Just watch out for those sparkly splashes!"
+  },
+  {
+      "outfit": "Mystik",
+      "description": "Step into the mysterious world of {{name}} the Mystik! With a cloak of mystery and a mystical staff, this duck is here to bring a little magic to your bath. {{name}} loves to perform bubble magic tricks and cast spells that make bath time extra relaxing. If you're ready for an enchanting soak, let {{name}} be your guide. Just be prepared for a little quacky magic-you never know what surprises might appear!"
+  },
+  {
+      "outfit": "Bat",
+      "description": "{{name}} is ready to take flight-right in your tub! Dressed as a bat, this duck loves to swoop through the bubbles, bringing a touch of the night to bath time. With tiny wings and an adventurous spirit, {{name}} is all about soaring splashes and batty fun. Get ready for a quacky, high-flying adventure that'll make your bath time unforgettable!"
+  },
+  {
+      "outfit": "Death",
+      "description": "{{name}}, dressed as Death, is here to make bath time a thrilling experience! But fear not-this quacky version of the Grim Reaper is more about fun than frights. With a mysterious cloak and a scythe made of rubber, {{name}} turns every bubble into a moment of light-hearted mischief. Just be prepared for some playful surprises-you never know when {{name}} might 'reap' some bubbles!"
+  },
+  {
+      "outfit": "Devil Man",
+      "description": "Meet {{name}}, the cheekiest Devil Man in the tub! With a pair of playful horns and a mischievous grin, {{name}} knows how to keep bath time exciting. This duck loves stirring up some devilish fun, like splashing extra bubbles your way or hiding under the foam. If you're ready for a bath filled with laughter and a little harmless trouble, {{name}} is your perfect bath-time partner!"
+  },
+  {
+      "outfit": "Shadow",
+      "description": "{{name}} the Shadow is here to bring a hint of mystery to your bath. Cloaked in dark colors and moving silently through the bubbles, {{name}} is all about the art of surprise. You never know when she might emerge from the shadows to give you a quacky scare-just for fun, of course! Let {{name}} add some playful mystery to your soak-you won't regret it!"
+  },
+  {
+      "outfit": "Mummy",
+      "description": "Introducing {{name}}, the quackiest mummy to ever waddle into your tub! Wrapped in bandages and ready for some spooky fun, this duck is here to make bath time both mysterious and hilarious. {{name}} loves to pop out from under the bubbles for a good old quacky scare-don't worry, he's all about fun, not frights. If you're ready for a bath with a touch of ancient giggles, let {{name}} be your mummy-fied bath-time buddy!"
+  },
+  {
+      "outfit": "Singing Shower",
+      "description": "{{name}} has crossed over to the bubbly side, and now he's ready to sing his way through bath time! In his singing shower outfit, {{name}} brings dramatic quacks and epic tunes to your tub. Whether he's belting out a classic rubber ducky anthem or giving a quacky twist to a well-known tune, {{name}} is sure to make your bath a hit. Prepare for a splashing good concert-may the bath be with you!"
+  },
+  {
+      "outfit": "Moos",
+      "description": "{{name}} is here to bring a splash of nature to your bath! Dressed in a mossy outfit, {{name}} loves to float peacefully, creating a calming atmosphere as if you were soaking in a natural pond. This duck is perfect for those moments when you just need to relax and connect with the tranquility of nature. Let {{name}} make your bath a quacky forest retreat!"
+  },
+  {
+      "outfit": "Ludwig",
+      "description": "{{name}} has gone classical with a Ludwig-inspired outfit! Complete with a powdered wig, this duck is ready to bring a touch of classical music to your bath. Imagine the sounds of a rubber duck orchestra as {{name}} 'conducts' the bubbles. Whether you're a fan of symphonies or just love a bit of elegance in the tub, {{name}} is here to make bath time a masterpiece!"
+  },
+  {
+      "outfit": "Quack me Amadeus",
+      "description": "{{name}} is channeling the great composer with a twist-it's Quack me Amadeus time! With a fancy outfit and an air of musical mischief, {{name}} turns your bath into a playful concert. Expect plenty of quacky serenades and bubbly symphonies as {{name}} brings a bit of Mozart-inspired fun to your soak. Get ready to feel like a musical genius (or just have a lot of fun)!"
+  },
+  {
+      "outfit": "Jack",
+      "description": "{{name}} is here to bring a bit of adventure to your bath, Jack-style! With a dashing outfit reminiscent of a famous explorer, {{name}} loves to navigate the bubbles in search of hidden treasures. This duck will make bath time an epic quest, complete with daring splashes and heroic quacks. Ready to explore the high seas (of your tub)? {{name}} is your duck!"
+  },
+  {
+      "outfit": "Glitter Flamingo",
+      "description": "{{name}} knows how to make an entrance-dressed as a Glitter Flamingo, this duck brings all the glamour to your bath! With glittering feathers and a flair for the dramatic, {{name}} will make every soak feel like a lavish party. Get ready for some fabulous splashes and a whole lot of quacky style. Bath time has never been this glamorous!"
+  },
+  {
+      "outfit": "Snowboarder",
+      "description": "{{name}} is hitting the slopes-right in your tub! Dressed as a snowboarder, Daisy loves carving through the bubbles and catching some serious air (with a little help from your splashes). This duck brings the thrill of the mountains to your bath, complete with quacky tricks and plenty of bubbly snow. Get ready for a bath-time adventure that's all about fun and excitement!"
+  },
+  {
+      "outfit": "Girl with a Pearl Earring",
+      "description": "{{name}} has gone classical-dressed as the Girl with a Pearl Earring, this duck brings a touch of art history to your bath. With a serene expression and an artistic flair, {{name}} loves to float quietly among the bubbles, adding a hint of elegance to your soak. If you're an art lover or just appreciate a refined bath-time companion, {{name}} is the perfect choice!"
+  },
+  {
+      "outfit": "I Love Pizza",
+      "description": "{{name}} is here to make bath time a cheesy delight! Dressed in an 'I Love Pizza' outfit, this duck is all about good vibes and tasty fun. Whether he's floating on a pizza slice or just quacking about his favorite food, {{name}} brings a lighthearted, delicious twist to your soak. Who knew pizza and bubbles could be such a perfect match?"
+  },
+  {
+      "outfit": "Lucky Cat",
+      "description": "{{name}} is ready to bring you some bath-time luck! Dressed as a Lucky Cat, this duck is all about good fortune and positive vibes. With a raised paw and a big smile, {{name}} turns every soak into a lucky experience. Get ready for some quacky good luck charms and plenty of happy splashes-{{name}} is here to make your bath extra special!"
+  },
+  {
+      "outfit": "Duck You",
+      "description": "{{name}} is here with a bit of attitude-dressed in a 'Duck You' outfit, she's ready to make bath time bold and full of personality. With a playful expression and a quacky sense of humor, {{name}} knows how to keep things interesting. Get ready for some sassy splashes and a lot of fun-{{name}} isn't your average rubber duck!"
+  },
+  {
+      "outfit": "BBQ",
+      "description": "{{name}} is ready to fire up the fun-dressed in a BBQ outfit, this duck is all about bringing the sizzle to your soak! With a chef's hat and a playful attitude, {{name}} loves making every bath feel like a summertime cookout. Get ready for some quacky grilling fun and plenty of bubbly 'smoke.' Who knew bath time could be this tasty?"
+  },
+  {
+      "outfit": "Pool",
+      "description": "{{name}} is ready to dive into the pool-right in your bathtub! Dressed in a poolside outfit, this duck loves to float lazily among the bubbles, making bath time feel like a relaxing day at the pool. With a pair of shades and a quacky smile, {{name}} knows how to keep things cool and fun. Let the splashing begin!"
+  },
+  {
+      "outfit": "Holland",
+      "description": "{{name}} is bringing a touch of Dutch charm to your bath! Dressed in a traditional Holland outfit, complete with a tiny bonnet, she's ready to make your soak feel like a trip through the tulip fields. Expect plenty of quacky charm and a splash of culture-{{name}} is here to make bath time gezellig!"
+  },
+  {
+      "outfit": "Glitter Unicorn",
+      "description": "{{name}} is here to make your bath magical-dressed as a Glitter Unicorn, she brings sparkle and enchantment to every soak. With a glittering horn and a rainbow-colored mane, {{name}} turns your tub into a whimsical wonderland. Get ready for some magical splashes and quacky unicorn magic-bath time has never been this enchanting!"
+  },
+  {
+      "outfit": "Kung Fu",
+      "description": "{{name}} is ready to show off some serious moves-dressed in a Kung Fu outfit, this duck brings action-packed fun to your bath! With a determined expression and a black belt, {{name}} loves to kick up the bubbles and practice quacky martial arts. Get ready for some high-flying splashes and a lot of laughs-{{name}} is here to make bath time a martial arts adventure!"
+  },
+  {
+      "outfit": "Namaste",
+      "description": "{{name}} is here to bring some zen to your bath-dressed in a Namaste outfit, this duck is all about relaxation and mindfulness. With a peaceful expression and a yoga pose, {{name}} loves to float calmly among the bubbles, helping you find your inner quack. Get ready for some relaxing splashes and a touch of tranquility-{{name}} is your guide to a peaceful soak!"
+  },
+  {
+      "outfit": "Tennis Man",
+      "description": "{{name}} is ready to serve up some fun-dressed as a Tennis Man, this duck loves to rally through the bubbles! With a tiny racket and a headband, {{name}} brings the thrill of the tennis court to your bath. Get ready for some quacky volleys and plenty of playful splashes-bath time just became a grand slam!"
+  },
+  {
+      "outfit": "Tour",
+      "description": "{{name}} is ready to take you on a bath-time tour-dressed in a Tour outfit, this duck is all about exploring new places (or bubbles). With a camera and a curious quack, {{name}} makes every soak feel like an adventure. Get ready to discover new bubbles and make some splashy memories-{{name}} is the ultimate bath-time tour guide!"
+  },
+  {
+      "outfit": "Tennis Woman",
+      "description": "{{name}} is here to take on the competition-dressed as a Tennis Woman, she loves to play through the bubbles and show off her quacky backhand. With a sporty outfit and a determined look, {{name}} turns your bath into a tennis court full of fun. Get ready for some playful splashes and a match to remember-{{name}} is ready to serve up some bath-time excitement!"
+  },
+  {
+      "outfit": "Duck World",
+      "description": "{{name}} is ready to take you on a world tour-Duck World, that is! Dressed in an adventurous outfit, {{name}} loves to explore every corner of the tub, bringing a touch of wanderlust to bath time. Get ready for some quacky adventures, exciting splashes, and plenty of world-class fun-{{name}} is your guide to a bath-time journey around the globe!"
+  },
+  {
+      "outfit": "Charles",
+      "description": "{{name}} is feeling extra sophisticated-dressed as 'Charles', he's ready to add a touch of class to your bath. With a charming demeanor and a royal flair, {{name}} makes bath time feel like a stately occasion. Get ready for a quacky yet distinguished soak that will leave you feeling like royalty."
+  },
+  {
+      "outfit": "Ducktrix",
+      "description": "Welcome to the Ducktrix! {{name}} is here to bring some futuristic vibes to your bath, complete with a sleek outfit that looks straight out of an action-packed movie. She's ready to dodge bubbles in slow motion and keep things quacky while making you feel like a hero of your own bath-time adventure."
+  },
+  {
+      "outfit": "Bee",
+      "description": "{{name}} is buzzing into your bath dressed as a bee! With black and yellow stripes and a pair of little wings, this duck brings all the buzz to bath time. Get ready for some honey-sweet fun and a lot of happy splashing-bath time has never been this bee-autiful!"
+  },
+  {
+      "outfit": "Tulips",
+      "description": "{{name}} is here to bring a bouquet of tulips to your bath! With her floral outfit, she's all about making your soak feel like springtime. Expect colorful bubbles and a gentle fragrance of fun as {{name}} adds a touch of nature to your bath. It's always a good day for a little flower power!"
+  },
+  {
+      "outfit": "Rainbow",
+      "description": "{{name}} is bringing the rainbow to your bath! Dressed in all the colors of the spectrum, this duck is all about making bath time vibrant and fun. With every splash, you'll feel the joy of a rainbow-filled soak-get ready for some colorful quacks and a bright bath-time adventure!"
+  },
+  {
+      "outfit": "Grey Cat",
+      "description": "{{name}} is embracing the feline side of life-dressed as a Grey Cat, {{name}} is here to purr and splash all at once! With cute whiskers and little cat ears, this duck brings a playful, furry twist to bath time. Just be ready for some quacky meows and adorable splashes!"
+  },
+  {
+      "outfit": "Fitness Girl",
+      "description": "{{name}} is ready to work out-dressed in a Fitness Girl outfit, this duck is all about keeping fit while splashing around. With a headband and leg warmers, {{name}} turns bath time into a fun fitness session. Get ready for some exercise, quacky-style, and plenty of energetic splashes!"
+  },
+  {
+      "outfit": "Blue Painted",
+      "description": "{{name}} is here to bring some artistic flair to your bath! Dressed in a Blue Painted outfit, she looks like a work of art. With swirls of blue and a regal posture, {{name}} will make you feel like you're soaking in a gallery. Get ready for some cultured splashes and artistic quacks!"
+  },
+  {
+      "outfit": "Light Blue Painted",
+      "description": "{{name}} is ready to bring some calming hues to your bath! With her Light Blue Painted outfit, she's all about making bath time relaxing and serene. Let the gentle colors and {{name}}'s graceful demeanor help you unwind and enjoy a peaceful soak."
+  },
+  {
+      "outfit": "Cherry Blossom",
+      "description": "{{name}} is bringing a touch of spring to your bath-dressed in a Cherry Blossom outfit, this duck makes every soak feel like a stroll through a blooming orchard. With delicate pink petals and a sweet scent of fun, {{name}} is here to make bath time beautifully quacky!"
+  },
+  {
+      "outfit": "Peace",
+      "description": "{{name}} is feeling extra zen-dressed in a 'Peace' outfit, he's all about spreading good vibes and tranquility in your bath. With a laid-back demeanor and a peace sign, {{name}} is here to help you relax, unwind, and float away on a peaceful wave of bubbles."
+  },
+  {
+      "outfit": "Miss You",
+      "description": "{{name}} is here to tug at your heartstrings-dressed in a 'Miss You' outfit, this duck is perfect for those bath-time moments when you're feeling sentimental. With a heartfelt message and plenty of quacky comfort, {{name}} is ready to keep you company and make every soak a little brighter."
+  },
+  {
+      "outfit": "Glitter Gold",
+      "description": "{{name}} is shining bright-dressed in a Glitter Gold outfit, he's here to add some sparkle to your bath. With a golden glow and glittery splashes, {{name}} turns your soak into a shimmering experience. Get ready for some luxurious quacks and dazzling bubbles!"
+  },
+  {
+      "outfit": "Smiley",
+      "description": "{{name}} is all smiles-dressed in a Smiley outfit, this duck is here to brighten up your bath. With a cheerful face and positive vibes, {{name}} is ready to make every splash a happy one. Get ready for some quacky smiles and a lot of joyful splashes!"
+  },
+  {
+      "outfit": "Glitter Pink Crown",
+      "description": "{{name}} is feeling royal-dressed in a Glitter Pink Crown, this duck is ready to rule over bath time with style. With plenty of sparkle and a majestic quack, {{name}} brings the perfect mix of fun and glamour to your soak. Get ready for some royal splashes!"
+  },
+  {
+      "outfit": "Confetti",
+      "description": "{{name}} is ready to party-dressed in a Confetti outfit, she's all about bringing the celebration to your bath. With colorful confetti and a playful attitude, {{name}} makes every soak feel like a festive occasion. Get ready for some quacky fun and plenty of cheerful splashes!"
+  },
+  {
+      "outfit": "International",
+      "description": "{{name}} is here to take you on a world tour-dressed in an 'International' outfit, this duck loves exploring different cultures and sharing the fun. With a variety of patterns and colors, {{name}} brings a global vibe to your bath. Get ready for some international splashes and plenty of worldly quacks!"
+  },
+  {
+      "outfit": "Easter",
+      "description": "{{name}} is ready to hop into your bath-dressed in an Easter outfit, this duck brings all the springtime cheer to your soak. With pastel colors and a playful smile, {{name}} is here to make bath time feel like an Easter egg hunt. Get ready for some quacky fun and festive splashes!"
+  },
+  {
+      "outfit": "Cabernet Sauvignon",
+      "description": "{{name}} is feeling fancy-dressed in a 'Cabernet Sauvignon' outfit, this duck brings a touch of elegance to your bath. With a wine-themed look and a refined quack, {{name}} is ready to help you unwind and enjoy a sophisticated soak. Cheers to a bubbly, quacky good time!"
+  },
+  {
+      "outfit": "Chef Cook",
+      "description": "{{name}} is ready to whip up some fun-dressed as a Chef Cook, this duck loves to 'cook' up some bubbles and make bath time extra delicious. With a chef's hat and a playful smile, {{name}} is here to turn your soak into a culinary adventure. Get ready for some quacky recipes and plenty of splashes!"
+  },
+  {
+      "outfit": "Get Well",
+      "description": "{{name}} is here to help you feel better-dressed in a 'Get Well' outfit, this duck brings comforting vibes to your bath. With a caring quack and a warm smile, {{name}} is the perfect bath-time companion when you need a little extra TLC. Get ready for some quacky cheer and soothing splashes!"
+  },
+  {
+      "outfit": "Glitter Silver",
+      "description": "{{name}} is ready to shine-dressed in Glitter Silver, this duck adds a touch of sparkle to your bath. With a shimmering look and plenty of playful splashes, {{name}} turns bath time into a glittery adventure. Get ready for some dazzling quacks and extra sparkly fun!"
+  },
+  {
+      "outfit": "Thank You",
+      "description": "{{name}} is here to say thanks-dressed in a 'Thank You' outfit, this duck brings gratitude to your bath. With a heartfelt quack and a grateful smile, {{name}} makes every soak a moment of appreciation. Get ready for some thankful splashes and quacky gratitude!"
+  },
+  {
+      "outfit": "Mother",
+      "description": "{{name}} is all about love-dressed in a 'Mother' outfit, this duck brings warmth and care to your bath. With a gentle quack and a nurturing presence, {{name}} makes bath time feel like a comforting hug. Get ready for some motherly splashes and lots of quacky love!"
+  },
+  {
+      "outfit": "Holiday Man",
+      "description": "{{name}} is ready for a vacation-dressed in a 'Holiday Man' outfit, she's here to bring a little getaway vibe to your bath. With sunglasses and a relaxed attitude, {{name}} turns your soak into a holiday retreat. Get ready for some chill splashes and quacky relaxation!"
+  },
+  {
+      "outfit": "Harry",
+      "description": "{{name}} is feeling magical-dressed in a 'Harry' outfit, this duck brings a touch of wizardry to your bath. With glasses and a little lightning bolt, {{name}} makes bath time feel like a spellbinding adventure. Get ready for some magical quacks and enchanted splashes!"
+  },
+  {
+      "outfit": "Pop Hearts",
+      "description": "{{name}} is feeling the love-dressed in 'Pop Hearts', this duck is ready to spread some heartwarming fun in your bath. With bright colors and a playful quack, {{name}} turns every soak into a love-filled splash fest. Get ready for some quacky love and lots of bubbly hearts!"
+  },
+  {
+      "outfit": "Glitter Blue Crown",
+      "description": "{{name}} is ready to rule-dressed in a Glitter Blue Crown, this duck is here to make bath time royal and fun. With plenty of sparkle and a majestic quack, {{name}} brings a regal touch to your soak. Get ready for some kingly splashes and lots of quacky fun!"
+  },
+  {
+      "outfit": "FU",
+      "description": "{{name}} is feeling bold-dressed in an 'FU' outfit, this duck brings a bit of attitude to your bath. With a rebellious quack and plenty of splashes, {{name}} is here to make bath time anything but ordinary. Get ready for some bold fun and a lot of quacky personality!"
+  },
+  {
+      "outfit": "Santa Claus",
+      "description": "{{name}} is ready for the holidays-dressed as Santa Claus, this duck brings festive cheer to your bath. With a jolly quack and plenty of ho-ho-hos, {{name}} turns every soak into a holiday celebration. Get ready for some quacky Christmas cheer and lots of joyful splashes!"
+  },
+  {
+      "outfit": "Christmas Tree White",
+      "description": "{{name}} is feeling festive-dressed in a Christmas Tree White outfit, she's ready to bring holiday cheer to your bath. With twinkling decorations and a quacky smile, {{name}} turns your soak into a winter wonderland. Get ready for some festive splashes and plenty of holiday joy!"
+  },
+  {
+      "outfit": "Christmas Tree Red",
+      "description": "{{name}} is dressed to impress-dressed in a Christmas Tree Red outfit, this duck is all about spreading holiday cheer. With bright red decorations and a jolly quack, {{name}} makes bath time feel like a festive celebration. Get ready for some cheerful splashes and lots of quacky holiday fun!"
+  },
+  {
+      "outfit": "Barista",
+      "description": "{{name}} is ready to brew up some fun-dressed as a Barista, this duck brings a touch of coffeehouse charm to your bath. With a tiny apron and a warm smile, {{name}} makes every soak feel like a cozy caf\u00e9 experience. Get ready for some quacky lattes and bubbly relaxation!"
+  },
+  {
+      "outfit": "Christmas Tree Gold",
+      "description": "{{name}} is shining bright-dressed in a Christmas Tree Gold outfit, he's ready to bring some golden holiday cheer to your bath. With sparkling decorations and a festive quack, {{name}} makes bath time feel like a luxurious holiday celebration. Get ready for some golden splashes and lots of quacky cheer!"
+  },
+  {
+      "outfit": "Christmas Tree Glitter Classic",
+      "description": "{{name}} is feeling extra festive-dressed in a Christmas Tree Glitter Classic outfit, this duck brings a sparkling holiday touch to your bath. With glittery decorations and a cheerful quack, {{name}} turns every soak into a classic holiday celebration. Get ready for some glittery splashes and festive fun!"
+  },
+  {
+      "outfit": "Guardian",
+      "description": "{{name}} is ready to protect-dressed as a Guardian, this duck brings a watchful eye to your bath. With a determined quack and a strong presence, {{name}} is here to make sure bath time is safe and fun. Get ready for some protective splashes and lots of quacky security!"
+  },
+  {
+      "outfit": "Angel Silver",
+      "description": "{{name}} is feeling angelic-dressed in an Angel Silver outfit, this duck brings a touch of heaven to your bath. With silver wings and a gentle quack, {{name}} makes every soak feel peaceful and serene. Get ready for some heavenly splashes and lots of quacky grace!"
+  },
+  {
+      "outfit": "Christmas Ball Red",
+      "description": "{{name}} is ready to deck the halls-dressed in a Christmas Ball Red outfit, this duck brings festive cheer to your bath. With a shiny red look and a joyful quack, {{name}} makes every soak feel like a holiday celebration. Get ready for some cheerful splashes and lots of quacky holiday fun!"
+  },
+  {
+      "outfit": "Artiste",
+      "description": "{{name}} is feeling creative-dressed as an Artiste, this duck brings an artistic flair to your bath. With a beret and a paintbrush, {{name}} is ready to make bath time a masterpiece. Get ready for some quacky creativity and lots of colorful splashes!"
+  }
+]

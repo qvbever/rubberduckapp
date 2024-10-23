@@ -50,9 +50,10 @@ gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
 gem "devise"
 gem 'nokogiri'
+gem 'faker'
 gem "pg_search"
 gem "geocoder"
-gem 'webpacker'
+#gem 'webpacker'
 
 group :development, :test do
   gem "dotenv-rails"

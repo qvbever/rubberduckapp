@@ -1,11 +1,11 @@
-// app/assets/stylesheets/components/_buttons.scss
 @import "../config/colors";
 
 .button {
-  display: inline-block;
+  display: block;  /* Make the button block-level for full width */
+  width: 100%;
   padding: 10px 20px;
   border-radius: 5px;
-  background-color: #3498db; // Primary color
+  background-color: $light-orange; // Light orange from the color scheme
   color: white;
   text-align: center;
   text-decoration: none;
@@ -14,29 +14,50 @@
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #2980b9; // Darken on hover
+    background-color: $dark-orange; // Darker orange on hover
+    color: white; // Ensure text color remains white on hover
   }
 
   &.primary {
-    background-color: #2ecc71; // Green button
+    background-color: $green; // Green for primary buttons
+    width: 100%;  // Make the button full-width
+    &:hover {
+      background-color: darken($green, 10%); // Darker green on hover
+      color: white; // Ensure text color stays white
+    }
   }
 
   &.danger {
-    background-color: #e74c3c; // Red button
+    background-color: $dark-orange; // Dark orange for danger buttons
+    &:hover {
+      background-color: lighten($dark-orange, 10%); // Lighter orange on hover for danger buttons
+      color: white; // Ensure text color remains white
+    }
   }
 
   &.small {
     padding: 5px 10px;
     font-size: 12px;
+    //background-color: $light-yellow; // Light yellow for small buttons
+    &:hover {
+      //background-color: darken($light-yellow, 10%); // Darker yellow on hover for small buttons
+      color: white; // Ensure text color remains white
+    }
   }
 
   &.large {
     padding: 15px 30px;
     font-size: 20px;
+    background-color: $yellow; // Yellow for large buttons
+    &:hover {
+      background-color: darken($yellow, 10%); // Darker yellow on hover for large buttons
+      color: white; // Ensure text color remains white
+    }
   }
 }
+
 .profile-btn {
-  background-color: lightgoldenrodyellow;
+  //background-color: $light-yellow; // Light yellow for the profile button
   color: white;
   border: 2px solid darkgray;
   border-radius: 25px;
