@@ -3,8 +3,8 @@
   <% if params[:query].present? && params[:search_type] == "search_bar" %>
     <h5 id="results"><strong><i>Finding results for "<%= params[:query] %>"...</i></strong><h5>
   <% end %>
-  <% if false %>
-  <% top_rated_rubberducks = @rubberducks.select { |rubberduck| rubberduck.rating >= 4.5 } %>
+
+  <% top_rated_rubberducks = @rubberducks.select { |rubberduck| rubberduck.rating.to_f >= 4.5 } %>
 
   <% if top_rated_rubberducks.any? %>
     <% if params[:query].present? %>
@@ -34,7 +34,9 @@
     <h2><strong>All available rubberducks</strong></h2>
     <div class="duck-container">
       <ul class="duck-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px;">
-        <% @rubberducks.each do |rubberduck| %>
+
+        <% @rubberducks.select { |rubberduck| rubberduck.rating.to_f < 4.5 }.each do |rubberduck| %>
+
           <li>
             <% if params[:user_id] %>
               <%= render "shared/rubber_duck_card", rubberduck: rubberduck %>
